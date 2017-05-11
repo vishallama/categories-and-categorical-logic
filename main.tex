@@ -102,4 +102,19 @@ We say that a function $f: X \to Y$ is:\\~\\
 	And, this completes our proof.
 \end{proof}
 
+\setcounter{Exercise}{4}
+\begin{Exercise}
+	Suppose $G$ and $H$ are groups (and hence monoids), and that $h: G \to H$
+	is a monoid homomorphism. Prove that $h$ is a group homomorphism.
+\end{Exercise}
+\begin{proof}
+	We need only show that $h$ preserves inverses. To that end,
+	suppose $g^{-1}$ is the inverse of $g \in G$. Also, let $h(g) = h'$, and
+	$h(g^{-1}) = h''$.
+	Then, $h' h'' = h(g) h(g^{-1}) = h(g g^{-1}) = h(1_G) = 1_H$.
+	And, also $h'' h' = h(g^{-1}) h(g) = h(g^{-1} g) = h(1_G) = 1_H$.
+	This shows that $h'$ and $h''$ are inverses of each other, thereby
+	implying $h$ preserves inverses, which is what we set out to prove.
+\end{proof}
+
 \end{document}
