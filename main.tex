@@ -26,5 +26,50 @@
 \mainmatter
 
 \chapter{Introduction to Categories and Categorical Logic}
+\section{Introduction}
+We say that a function $f: X \to Y$ is:\\~\\
+\begin{tabular}{ l l }
+	\emph{injective} & if $\forall x, x' \in X. f(x) = f(x') \implies x = x'$, \\
+	\emph{surjective} & if $\forall y \in Y. \exists x \in X. f(x) = y$, \\~\\
+	\emph{monic} & if $\forall g, h. f \circ g = f \circ h \implies g = h$
+	\q ($f$ is left cancellative),\\
+	\emph{epic} & if $\forall g, h. g \circ f = h \circ f \implies g = h$
+	\q ($f$ is right cancellative).
+\end{tabular}\\
+
+\begin{prop}
+	Let $f : X \to Y$. Then,
+	\begin{enumerate}
+		\item $f$ is injective $\iff f$ is monic.
+		\item $f$ is surjective $\iff f$ is epic.
+	\end{enumerate}
+\end{prop}
+\begin{proof}
+	We first show $(1)$.\\
+	($\impliedby$) Suppose $f$ is monic. Fix a one-element set
+	$\boldsymbol{1} = \{ \bullet \}$. Then, note that elements $x \in X$ are in
+	1-1 correspondence with functions $\bar{x}: \boldsymbol{1} \to X$, defined
+	by $\bar{x}(\bullet) := x$. Then, for all $x, x' \in X$, we have\\~\\
+	\begin{tabular} { l l }
+		& $f(x) = f(x')$\\
+		$\implies$ & $f(\bar{x}(\bullet)) = f(\bar{x'}(\bullet))$\\
+		$\implies$ & $(f \circ \bar{x})(\bullet) = (f \circ \bar{x'})(\bullet)$\\
+		$\implies$ & $f \circ \bar{x} = f \circ \bar{x'}$\\
+		$\implies$ & $\bar{x} = \bar{x'}$ \q (since $f$ is monic) \\
+		$\implies$ & $\bar{x}(\bullet) = \bar{x'}(\bullet)$\\
+		$\implies$ & $x = x'$
+	\end{tabular}\\
+	This shows that $f$ is injective.\\
+
+	($\implies$) Suppose $f$ is injective. Let $f \circ g = f \circ h$ for all
+	$g, h: A \to X$. Then, for all $a \in A$,\\
+	\begin{tabular} { l l }
+		& $(f \circ g)(a) = (f \circ h)(a)$\\
+		$\implies$ & $f(g(a)) = f(h(a))$\\
+		$\implies$ & $g(a) = h(a)$ \q (since $f$ is injective)\\
+		$\implies$ & $g = h$
+	\end{tabular}\\
+	This establishes that $f$ is monic. And, we are done.
+\end{proof}
 
 \end{document}
