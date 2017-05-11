@@ -72,4 +72,34 @@ We say that a function $f: X \to Y$ is:\\~\\
 	This establishes that $f$ is monic. And, we are done.
 \end{proof}
 
+\setcounter{Exercise}{1}
+\begin{Exercise}
+	Show that $f: X \to Y$ is surjective iff it is epic.
+\end{Exercise}
+\begin{proof}
+	($\implies$) Suppose $f: X \to Y$ is epic. And, assume, for the sake of contradiction,
+	$f$ is \emph{not} surjective. Then, there exists some $y_0 \in Y$, such
+	that, for all $x \in X$, $f(x) \ne y_0$. Define mappings $g, h: Y \to Y \cup \{ Y \}$
+	by:
+	\begin{center}
+		$g(y) := y$\\~\\
+		$h(y) :=
+		\begin{cases}
+		y & \text{if } y \ne y_0 \\
+		Y & \text{if } y = y_0
+		\end{cases}$
+	\end{center}
+	Note that $g \ne h$.\\
+	Then, for all $x \in X$, $(g \circ f)(x) = g(f(x)) = h(f(x)) = (h \circ f)(x)$.
+	This implies $g \circ f = h \circ f$, which implies $g = h$, since $f$ is
+	epic. The last conclusion contradicts the fact that $g = h$. Thus, we
+	conclude $f$ is	surjective.\\~\\
+	($\impliedby$) Suppose $f: X \to Y$ is surjective. Then, for any $y \in Y$,
+	there exists an $x \in X$, such that $f(x) = y$. Now, assume, for all
+	$g, h: Y \to Z$, $g \circ f = h \circ f$. Then, for all $y \in Y$,
+	$g(y) = g(f(x)) = (g \circ f)(x) = (h \circ f)(x) = h(f(x)) = h(y)$, which
+	implies $g = h$, showing that $f$ is epic.\\
+	And, this completes our proof.
+\end{proof}
+
 \end{document}
