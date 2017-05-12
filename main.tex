@@ -223,4 +223,24 @@ We say that a function $f: X \to Y$ is:\\~\\
 	j' \circ 1_B = j'$, and we are done.
 \end{proof}
 
+\begin{Exercise}
+	Show that $\cong$ is an equivalence relation on the objects of a category.
+\end{Exercise}
+\begin{proof}
+	Let $\catname{C}$ be some category.\\
+	(\emph{Reflexivity}) For any object $X \in \catname{C}$, $X \cong X$
+	follows from the fact that the identity morphism $1_X: X \to X$ is an
+	isomorphism.\\
+	(\emph{Symmetry}) If $X \cong Y$, then there exists an isomorphism $i: X
+	\to Y$. But, the inverse, $i^{-1}: Y \to X$, of $i$ is also an isomorphism.
+	Hence, $Y \cong X$.\\
+	(\emph{Transitivity}) Suppose $X \cong Y$ and $Y \cong Z$. Then, there
+	exist isomorphisms $i: X \to Y$ and $j: Y \to Z$. Then, we claim that
+	$j \circ i: X \to Z$ is also an isomorphism. Indeed, its trivial to show
+	that its inverse is the morphism $i^{-1} \circ j^{-1}: Z \to X$. This
+	implies $X \cong Z$.\\
+	We thus conclude that $\cong$ is an equivalence relation on the objects of
+	a category.
+\end{proof}
+
 \end{document}
