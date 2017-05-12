@@ -143,6 +143,15 @@ We say that a function $f: X \to Y$ is:\\~\\
 	identity morphism. The associativity of linear maps and the identity axiom
 	follow from the	property of functions. This shows that $\catname{Vect}_k$
 	is also a category.
+
+    ($\catname{Pos}$) The objects are partially ordered sets, and morphisms
+    are monotone functions between these sets. Suppose $h: P \to Q$ and
+    $g: Q \to R$ are monotone functions. Then, for all $x, y \in P$,
+    $x \le y \implies h(x) \le h(y) \implies g(h(x)) \le g(h(y)) \implies
+    (g \circ h)(x) \le (g \circ h)(y)$, which shows $g \circ h: P \to R$ is
+    a monotone function. The identity map is the identity morphism, and the
+    associativity and identity axioms are satisfied by the property of
+    functions. This establishes $\catname{Pos}$ is a category.
 \end{proof}
 
 \end{document}
