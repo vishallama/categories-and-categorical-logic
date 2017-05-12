@@ -195,7 +195,21 @@ We say that a function $f: X \to Y$ is:\\~\\
     big can homsets in $\catname{Pos}$ be?)
 \end{Exercise}
 \begin{proof}
-
+	Let $(P, \le)$ be a preorder. Then, we define the corresponding category
+	$\catname{C}$ as follows. The objects of $\catname{C}$ are the elements of
+	the set $P$, and for all $x, y \in P$, we define a morphism $x \to y$ iff
+	$x \le y$. Then, for every object $x \in \catname{C}$, the identity
+	morphism $1_x: x \to x$ corresponds exactly to the reflexive property
+	$x \le x$ for all $x \in P$. Note that each homset in $\catname{C}$ has at
+	most one element. Also, for every $x \to y$ and $y \to z$ in $\catname{C}$,
+	$x \to z$ follows from the fact that $x \le y$ and $y \le z$ and the
+	transitivity of the $\le$ relation on $P$. This defines a composition map
+	for morphisms in $\catname{C}$. In addition, for all morphisms $x \to y$,
+	$y \to z$, and $z \to w$, their associativity follows immediately from the
+	transitivity of $\le$. Lastly, the unit laws also follow from the same
+	transitivity relation. Therefore, we conclude that every preorder
+	corresponds precisely to a category in which each homset has at most one
+	element.
 \end{proof}
 
 \end{document}
