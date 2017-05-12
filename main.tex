@@ -131,6 +131,18 @@ We say that a function $f: X \to Y$ is:\\~\\
 	homomorphisms $f, g$ and $h$ with the appropriate domains and codomains,
 	$h \circ (g \circ f) = (h \circ g) \circ f$. This establishes that
 	$\catname{Mon}$ is indeed a category.
+
+	($\catname{Vect}_k$) The objects are vector spaces over a field $k$, and
+	morphisms are linear maps between vector spaces. Suppose $f: U \to V$ and
+	$g: V \to W$ are linear maps. Then, for all $x, y \in U$, we have
+	$(g \circ f)(x + y) = g(f(x + y)) = g(f(x) + f(y)) = g(f(x)) + g (f(y)) =
+	(g \circ f)(x) + (g \circ f)(y)$. Also, for all $\alpha \in k$, we have
+	$(g \circ f)(\alpha x) = g(f(\alpha x)) = g(\alpha f(x)) = \alpha g(f(x))
+	= \alpha (g \circ f)(x)$. This establishes $g \circ f: U \to W$ is a
+	linear map as well. The identity map $1_U$ for any vector space $U$ is the
+	identity morphism. The associativity of linear maps and the identity axiom
+	follow from the	property of functions. This shows that $\catname{Vect}_k$
+	is also a category.
 \end{proof}
 
 \end{document}
