@@ -11,6 +11,7 @@
 %% User-defined commands
 \newcommand{\q}{\quad}
 \newcommand{\qq}{\qquad}
+\newcommand{\catname}[1]{\mathbf{#1}}
 
 \newtheorem{prop}{Proposition}
 
@@ -112,6 +113,24 @@ We say that a function $f: X \to Y$ is:\\~\\
 	suppose $g^{-1}$ is the inverse of $g \in G$. Then, $h(g) h(g^{-1}) =
 	h(g g^{-1}) = h(1_G) = 1_H = h(1_G) = h(g^{-1} g) = h(g^{-1}) h(g)$.
 	This establishes $h$ preserves inverses, and we are done.
+\end{proof}
+
+\begin{Exercise}
+	Check that $\catname{Mon}, \catname{Vect}_k, \catname{Pos}$, and
+	$\catname{Top}$ are indeed categories.
+\end{Exercise}
+\begin{proof}
+	($\catname{Mon}$) The objects are monoids $(M, \cdot, 1_M)$, and morphisms
+	are monoid homomorphisms. Given monoid homomorphisms, $f: (M, \cdot, 1_M)
+	\to (N, \cdot, 1_N)$ and $g: (N, \cdot, 1_N) \to (P, \cdot, 1_P)$, the
+	function $g \circ f: (M, \cdot, 1_M) \to (P, \cdot, 1_P)$ is also a monoid
+	homomorphism, because for all $m, m' \in M$, we have $(g \circ f)(m m') =
+	g(f(m m')) = g(f(m) f(m')) = (g(f(m)) (g(f(m'))) = ((g \circ f)(m))
+	((g \circ f)(m'))$. Also, for each monoid, the identity morphism is the
+	identity function. It is also easy to check that for all monoid
+	homomorphisms $f, g$ and $h$ with the appropriate domains and codomains,
+	$h \circ (g \circ f) = (h \circ g) \circ f$. This establishes that
+	$\catname{Mon}$ is indeed a category.
 \end{proof}
 
 \end{document}
