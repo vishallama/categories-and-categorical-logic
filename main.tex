@@ -149,6 +149,23 @@ We say that a function $f: X \to Y$ is:\\~\\
     a monotone function. The identity map is the identity morphism, and the
     associativity and identity axioms are satisfied by the property of
     functions. This establishes $\catname{Pos}$ is a category.
+
+    ($\catname{Top}$) The objects are topological spaces, and morphisms are
+    continuous maps between these spaces. Given continuous maps $f: (X, T_X)
+    \to (Y, T_Y)$ and $g: (Y, T_Y) \to (Z, T_Z)$, we can show that $g \circ f:
+    (X, T_X) \to (Z, T_Z)$ is also a continuous map. First, note that for any
+    $T \subset Z$, $x \in (g \circ f)^{-1}(T)$ iff $(g \circ f)(x) \in T$ iff
+    $g(f(x)) \in T$ iff $f(x) \in g^{-1}(T)$ iff $x \in f^{-1}(g^{-1}(T))$.
+    Thus,
+    \begin{center}
+	    for all $T \subset Z, (g \circ f)^{-1}(T) = f^{-1}(g^{-1}(T))$.
+    \end{center}
+	Therefore, for any open set $T \in T_Z$, we have $g^{-1}(T) \in T_Y$,which
+	implies	$f^{-1}(g^{-1}(T)) \in T_X$, which implies $(g \circ f)^{-1}(T)
+	\in T_X$ (by using the result above.) Hence, $g \circ f: (X, T_X) \to
+	(Z, T_Z)$ is a continuous map. The associativity and identity axioms follow
+	from the associativity and identity laws for functions. This establishes
+	$\catname{Top}$ is a category.
 \end{proof}
 
 \end{document}
