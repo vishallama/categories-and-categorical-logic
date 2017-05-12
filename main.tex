@@ -168,4 +168,23 @@ We say that a function $f: X \to Y$ is:\\~\\
 	$\catname{Top}$ is a category.
 \end{proof}
 
+\begin{Exercise}
+    Check carefully that monoids correspond exactly to one-object categories.
+    Make sure you understand the difference between such a category and
+    $\catname{Mon}$. (For example: how many objects does $\catname{Mon})$
+    have?)
+\end{Exercise}
+\begin{proof}
+    (\href{https://ncatlab.org/nlab/show/monoid#as_a_oneobject_category}
+    {Monoid as a one-object category}) Given a monoid $(M, \cdot, 1)$,
+    we can construct its corresponding category as follows. We write
+    $\catname{B}M$ for the corresponding category with a single object
+    $\bullet$, where $\catname{Hom}_{\catname{B}M}(\bullet, \bullet) := M$.
+    We note then that the composition map in $\catname{B}M$ is reflected in
+    the binary operation $\_ \cdot \_ : M \times M \to M$, where
+    $\mathbf{id}_{\bullet} := 1$. Then, the associative and identity laws for
+    the category $\catname{B}M$ follow directly from the associative and
+    identity laws, respectively, satisfied by the monoid $(M, \cdot, 1)$.
+    This shows any monoid can be seen or interpreted as a one-object category.
+\end{proof}
 \end{document}
