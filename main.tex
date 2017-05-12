@@ -212,4 +212,15 @@ We say that a function $f: X \to Y$ is:\\~\\
 	element.
 \end{proof}
 
+\setcounter{Exercise}{9}
+\begin{Exercise}
+	Show that the inverse, if it exists, is unique.
+\end{Exercise}
+\begin{proof}
+	Suppose $i: A \to B$ is an isomorphism, with inverse $j: B \to A$, in a
+	category $\catname{C}$. Suppose $j': B \to A$ is also an inverse of $i$.
+	Then, $j = 1_A \circ j = (j' \circ i) \circ j = j' \circ (i \circ j) =
+	j' \circ 1_B = j'$, and we are done.
+\end{proof}
+
 \end{document}
