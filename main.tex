@@ -249,7 +249,45 @@ We say that a function $f: X \to Y$ is:\\~\\
 	to homeomorphisms, and in $\catname{Pos}$ to isomorphisms.
 \end{Exercise}
 \begin{proof}
+    ($\catname{Set}$) We claim the following:
+    \begin{enumerate}
+        \item $f: X \to Y$ is injective iff $f$ has a left inverse.
+        \item $f: X \to Y$ is surjective iff $f$ has a right inverse.
+    \end{enumerate}
+    We first show (1).\\
+    ($\implies$) Suppose $f: X \to Y$ has a left inverse, $g: Y \to X$, say.
+    Then, $g \circ f = 1_X$. Assume for any $x, x' \in X, f(x) = f(x')$. Then,
+    $x = 1_X(x) = (g \circ f)(x) = g(f(x)) = g(f(x')) = (g \circ f)(x') =
+    1_X(x') = x'$, which implies $f$ is injective.\\
+    ($\impliedby$) Suppose $f: X \to Y$ is injective. If $X$ is empty, then $f$
+    is an empty function corresponding to each $Y$. In this case, $1_X$ is also
+    an empty function, and we thus have $g \circ f = 1_X$ for any $g: Y \to X$.
+    That is, $f$ has a left inverse. On the other hand, if $X$ is nonempty,
+    choose some $x_0 \in X$. Define $g: Y \to X$ by
+    \begin{center}
+        $g(y) :=
+        \begin{cases}
+        x_0 & \text{if } y \in Y \setminus \mathbf{Im}(f) \\
+        f^{-1}(y) & \text{if } y \in \mathbf{Im}(f)
+        \end{cases}$
+    \end{center}
+    Then, for all $x \in X, (g \circ f)(x) = g(f(x)) = x = 1_X(x)$, which
+    implies $g \circ f = 1_X$, thus showing that $g$ is a left inverse of $f$.
 
+    We now show (2).\\
+    ($\implies$) Suppose $f: X \to Y$ has a right inverse, $g: Y \to X$, say.
+    Then, $f \circ g = 1_Y$. Therefore, for all $y \in Y$, $y = 1_Y(y) =
+    (f \circ g)(y) = f(g(y)) = f(x)$, where $x = g(y)$. This shows $f$ is
+    surjective.\\
+    ($\impliedby$) Suppose $f: X \to Y$ is surjective. Now, consider an indexed
+    family of nonempty sets $\{ f^{-1}(y)\}_{y \in Y}$. Then, using the axiom
+    of choice, we conclude there exists a function $g: Y \to X$, such that $g(y)
+    \in f^{-1}(y)$ for all $y \in Y$. Then, for all $y \in Y$, $(f \circ g)(y) =
+    f(g(y)) = y = 1_Y(y)$, which implies $f \circ g = 1_Y$, thus proving $f$ has
+    a right inverse.\\
+    Since in $\catname{Set}$ a bijection is a function which is both injective
+    and surjective, using (1) and (2), we immediately conclude that bijections
+    in $\catname{Set}$ correspond exactly to isomorphisms, and we are done.
 \end{proof}
 
 \end{document}
