@@ -309,4 +309,27 @@ We say that a function $f: X \to Y$ is:\\~\\
     ($\catname{Pos}$)
 \end{proof}
 
+\subsection*{Opposite Categories and Duality}
+Given a category $\catname{C}$, the opposite category $\catname{C}^{\mathbf{op}}$
+is given by taking the same objects as $\catname{C}$, and
+\begin{center}
+    $\catname{C}^{\mathbf{op}}(A, B) = \catname{C}(B, A)$.
+\end{center}
+
+Composition and identities are inherited from $\catname{C}$.\\
+If we have
+\begin{center}
+    $A \xrightarrow{f} B \xrightarrow{g} C$
+\end{center}
+in $\catname{C}^{\mathbf{op}}$, this means
+\begin{center}
+    $A \xleftarrow{f} B \xleftarrow{g} C$
+\end{center}
+in $\catname{C}$. Therefore, composition $ g \circ f$ is
+$\catname{C}^{\mathbf{op}}$ is defined as $f \circ g$ in $\catname{C}$. This
+leads to the \emph{\textbf{principle of duality}}: a statement $S$ is true
+about a category $\catname{C}$ iff its dual (\emph{i.e.} the one obtained
+from $S$ by reversing all the arrows) is true about $\catname{C}^{\mathbf{op}}$.
+For example, a morphism $f$ is monic in $\catname{C}^{\mathbf{op}}$ iff it is
+epic in $\catname{C}$. We say monic and epic are \emph{dual notions}.
 \end{document}
