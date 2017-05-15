@@ -444,6 +444,29 @@ $\catname{Set}$ is a lluf subcategory of $\catname{Rel}$.
             \circ 1_A$, which implies $g \circ f = 1_A$, since $f$ is monic
             (left cancellative). Thus, $g$ is also a left inverse of $f$, and
             hence, $f$ is iso.
+            \item[e.] It is easy to prove the inclusion map $\N \hookrightarrow
+            \Z$ is really a monoid homomorphism. Indeed, $i(0) = 0$, and, for all
+            $n_1, n_2 \in \N$, $i(n_1 + n_2) = n_1 + n_2 = i(n_1) + i(n_2)$.\\
+            Next, we show that $i$ is monic. Assume, for all monoid homomorphisms
+            $g, h: X \to \N$, $i \circ g = i \circ h$. Then, for all $x \in X$,
+            $(i \circ g)(x) = (i \circ h) (x)$, which implies $i(g(x)) = i(h(x))$,
+            which implies $g(x) = h(x)$, which implies $g = h$. This shows the
+            inclusion map is monic.\\
+            We now show the inclusion map is epic. First, assume, for all
+            monoid homomorphisms $g, h: (\Z, +, 0) \to (X, \star, 1_X)$,
+            $g \circ i = h \circ i$. Then, for all $n \in \N$, $(g \circ i)(n) = (h \circ i)(n)$, which
+            implies $g(i(n)) = h(i(n))$, which implies $g(n) = h(n)$. We now
+            claim that for all $n \ge 1$, $g(-n) = h(-n)$. To that end, we use
+            induction on $n$. Note that $g(-1) = g(-1) \star 1_X = g(-1) \star
+            h(0) = g(-1) \star h(1 + (-1)) = g(-1) \star h(1) \star h(-1) = g(-1)
+            \star g(1) * h(-1) = g(-1 + 1) \star h(-1) = g(0) \star h(-1) = 1_X
+            \star h(-1) = h(-1)$. Now, assume the proposition holds for some
+            $n \ge 1$. Then, $g(-(n + 1)) = g(-n + (-1)) = g(-n) \star g(-1) =
+            h(-n) \star h(-1) = h(-n + (-1)) = h(-(n + 1))$. Hence, by induction,
+            $g(-n) = h(-n)$ for all $n \ge 1$. Combining the results from above,
+            we thus conclude $g(z) = h(z)$ for all $z \in \Z$. In other words,
+            $g = h$, which implies $i$ is epic.\\
+            Clearly, the inclusion map $\N \hookrightarrow \Z$ is not iso.
         \end{itemize}
     \end{enumerate}
 \end{solution}
