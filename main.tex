@@ -425,6 +425,11 @@ $\catname{Set}$ is a lluf subcategory of $\catname{Rel}$.
             (f \circ i) = g \circ (f \circ j) = (g \circ f) \circ j$, which
             implies $i = j$, since $g \circ f$ is monic. This implies $f$ is
             monic, and we are done.
+            \item[b.] Suppose $f: A \to B$ is split epic. Then, there exists a
+            $g: B \to A$ such that $f \circ g = 1_B$. Assume, for all $i, j: B
+            \to C$, $i \circ f = j \circ f$. Then, $i = i \circ 1_B = i \circ
+            (f \circ g) = (i \circ f) \circ g = (j \circ f) \circ g = j \circ
+            (f \circ g) = j \circ 1_B = j$, which shows $f$ is epic.
         \end{itemize}
     \end{enumerate}
 \end{solution}
