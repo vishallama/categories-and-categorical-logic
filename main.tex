@@ -437,6 +437,13 @@ $\catname{Set}$ is a lluf subcategory of $\catname{Rel}$.
             $(f \circ (g \circ f)^{-1}) \circ g = f \circ (g \circ f)^{-1} \circ
             (g \circ f) \circ f^{-1} = f \circ f^{-1} = 1_B$, which establishes
             $g$ is also an iso.
+            \item[d.] Suppose $f: A \to B$ is monic and split epic. The latter
+            implies $f$ has a right inverse, $g: B \to A$, say, where $f \circ g
+            = 1_B$. Note that $g \circ f: A \to A$ and $1_A: A \to A$. Now,
+            $f \circ (g \circ f) = (f \circ g) \circ f = 1_B \circ f = f = f
+            \circ 1_A$, which implies $g \circ f = 1_A$, since $f$ is monic
+            (left cancellative). Thus, $g$ is also a left inverse of $f$, and
+            hence, $f$ is iso.
         \end{itemize}
     \end{enumerate}
 \end{solution}
