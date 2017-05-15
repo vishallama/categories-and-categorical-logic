@@ -414,5 +414,19 @@ $\catname{Set}$ is a lluf subcategory of $\catname{Rel}$.
 
     \item Give a description of partial orders as categories of a special kind.
 \end{enumerate}
+\begin{solution}
+    \leavevmode
+    \begin{enumerate}
+        \item \leavevmode
+        \begin{itemize}
+            \item[a.] Suppose $f: A \to B$ and $g: B \to C$ such that
+            $g \circ f$ is monic. Assume, for all $i, j: Z \to A$,
+            $f \circ i = f \circ j$. Then, $(g \circ f) \circ i = g \circ
+            (f \circ i) = g \circ (f \circ j) = (g \circ f) \circ j$, which
+            implies $i = j$, since $g \circ f$ is monic. This implies $f$ is
+            monic, and we are done.
+        \end{itemize}
+    \end{enumerate}
+\end{solution}
 
 \end{document}
