@@ -378,4 +378,41 @@ $\catname{Set}$ is a lluf subcategory of $\catname{Rel}$.
     categories as there are monoids.
 \end{solution}
 
+\subsection*{Exercises}
+\begin{enumerate}
+    \item Consider the following properties of an arrow $f$ in a category
+    $\catname{C}$.
+    \begin{itemize}
+        \item $f$ is \emph{split monic} if for some $g$, $g \circ f$ is an
+        identity arrow.
+        \item $f$ is \emph{split epic} if for some $g$, $f \circ g$ is an
+        identity arrow.
+    \end{itemize}
+    \begin{itemize}
+        \item[a.] Prove that if $f$ and $g$ are arrows such that $g \circ f$ is
+        monic, then $f$ is monic.
+        \item[b.] Prove that if $f$ is split epic then it is epic.
+        \item[c.] Prove that if $f$ and $g \circ f$ are iso then $g$ is iso.
+        \item[d.] Prove that if $f$ is monic and split epic then it is iso.
+        \item[e.] In the category $\catname{Mon}$ of monoids and monoid
+        homomorphisms, consider the inclusion map
+        \begin{center}
+            $i: (\N, +, 0) \to (\Z, +, 0)$
+        \end{center}
+        of natural numbers into the integers. Show that this arrow is both monic
+        and epic. Is it an iso?
+    \end{itemize}
+    The \textbf{Axiom of Choice} in Set Theory states that if
+    $\{ X_i \}_{i \in I}$ is a family of nonempty sets, we can form  a set
+    $X = \{ x_i \mid i \in I \}$, where $x_i \in X_i$ for all $i \in I$.
+    \begin{itemize}
+        \item[f.] Show that in $\catname{Set}$ an arrow which is epic is split
+        epic. Explain why this needs the Axiom of Choice.
+        \item[g.] Is is always the case that an arrow which is epic is split
+        epic? Either prove that it is, or give a counterexample.
+    \end{itemize}
+
+    \item Give a description of partial orders as categories of a special kind.
+\end{enumerate}
+
 \end{document}
