@@ -348,4 +348,22 @@ epic in $\catname{C}$. We say monic and epic are \emph{dual notions}.
     the ``greater than or equal" preorder relation on $\R$.
 \end{proof}
 
+\subsection*{Subcategories}
+Let $\catname{C}$ be a category. Suppose we are given the collections
+\begin{center}
+    $\mathbf{Ob}(\catname{D}) \subseteq \mathbf{Ob}(\catname{C})$,\\
+    $\forall A, B \in \mathbf{Ob}(\catname{D}).
+    \catname{D}(A, B) \subseteq \catname{C}(A, B)$.
+\end{center}
+We say $\catname{D}$ is a \emph{\textbf{subcategory}} of $\catname{C}$ if
+it is itself a category. In particular, $\catname{D}$ is:
+\begin{itemize}
+    \item A \emph{\textbf{full}} subcategory of $\catname{C}$ if for any
+    $A, B \in \mathbf{Ob}(\catname{D})$, $\catname{D}(A, B) = \catname{C}(A, B)$.
+    \item  A \emph{\textbf{lluf}} subcategory of $\catname{C}$ if
+    $\mathbf{Ob}(\catname{D}) = \mathbf{Ob}(\catname{C})$.
+\end{itemize}
+For example, $\catname{Grp}$ is a full subcategory of $\catname{Mon}$, and
+$\catname{Set}$ is a lluf subcategory of $\catname{Rel}$.
+
 \end{document}
