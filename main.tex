@@ -430,6 +430,13 @@ $\catname{Set}$ is a lluf subcategory of $\catname{Rel}$.
             \to C$, $i \circ f = j \circ f$. Then, $i = i \circ 1_B = i \circ
             (f \circ g) = (i \circ f) \circ g = (j \circ f) \circ g = j \circ
             (f \circ g) = j \circ 1_B = j$, which shows $f$ is epic.
+            \item[c.] Suppose $f: A \to B$ and $g: B \to C$ such that $f$ and
+            $g \circ f$ are iso. We claim that the inverse of $g$ is
+            $f \circ (g \circ f)^{-1}: C \to B$. Indeed, $g \circ (f \circ
+            (g \circ f)^{-1}) = (g \circ f) \circ (g \circ f)^{-1} = 1_C$, and
+            $(f \circ (g \circ f)^{-1}) \circ g = f \circ (g \circ f)^{-1} \circ
+            (g \circ f) \circ f^{-1} = f \circ f^{-1} = 1_B$, which establishes
+            $g$ is also an iso.
         \end{itemize}
     \end{enumerate}
 \end{solution}
