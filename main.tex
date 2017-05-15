@@ -18,6 +18,8 @@
 \newcommand{\R}{\mathbb{R}}
 
 \newtheorem{prop}{Proposition}
+\newenvironment{solution}
+    {\begin{proof}[Solution]}{\end{proof}}
 
 
 \begin{document}
@@ -78,7 +80,7 @@ We say that a function $f: X \to Y$ is:\\~\\
 \begin{Exercise}
 	Show that $f: X \to Y$ is surjective iff it is epic.
 \end{Exercise}
-\begin{proof}
+\begin{solution}
 	($\implies$) Suppose $f: X \to Y$ is epic. And, assume, for the sake of contradiction,
 	$f$ is \emph{not} surjective. Then, there exists some $y_0 \in Y$, such
 	that, for all $x \in X$, $f(x) \ne y_0$. Define mappings $g, h: Y \to Y \cup \{ Y \}$
@@ -102,25 +104,25 @@ We say that a function $f: X \to Y$ is:\\~\\
 	$g(y) = g(f(x)) = (g \circ f)(x) = (h \circ f)(x) = h(f(x)) = h(y)$, which
 	implies $g = h$, showing that $f$ is epic.\\
 	And, this completes our proof.
-\end{proof}
+\end{solution}
 
 \setcounter{Exercise}{4}
 \begin{Exercise}
 	Suppose $G$ and $H$ are groups (and hence monoids), and that $h: G \to H$
 	is a monoid homomorphism. Prove that $h$ is a group homomorphism.
 \end{Exercise}
-\begin{proof}
+\begin{solution}
 	We need only show that $h$ preserves inverses. To that end,
 	suppose $g^{-1}$ is the inverse of $g \in G$. Then, $h(g) h(g^{-1}) =
 	h(g g^{-1}) = h(1_G) = 1_H = h(1_G) = h(g^{-1} g) = h(g^{-1}) h(g)$.
 	This establishes $h$ preserves inverses, and we are done.
-\end{proof}
+\end{solution}
 
 \begin{Exercise}
 	Check that $\catname{Mon}, \catname{Vect}_k, \catname{Pos}$, and
 	$\catname{Top}$ are indeed categories.
 \end{Exercise}
-\begin{proof}
+\begin{solution}
 	($\catname{Mon}$) The objects are monoids $(M, \cdot, 1_M)$, and morphisms
 	are monoid homomorphisms. Given monoid homomorphisms, $f: (M, \cdot, 1_M)
 	\to (N, \cdot, 1_N)$ and $g: (N, \cdot, 1_N) \to (P, \cdot, 1_P)$, the
@@ -170,7 +172,7 @@ We say that a function $f: X \to Y$ is:\\~\\
 	(Z, T_Z)$ is a continuous map. The associativity and identity axioms follow
 	from the associativity and identity laws for functions. This establishes
 	$\catname{Top}$ is a category.
-\end{proof}
+\end{solution}
 
 \begin{Exercise}
     Check carefully that monoids correspond exactly to one-object categories.
@@ -178,7 +180,7 @@ We say that a function $f: X \to Y$ is:\\~\\
     $\catname{Mon}$. (For example: how many objects does $\catname{Mon})$
     have?)
 \end{Exercise}
-\begin{proof}
+\begin{solution}
     (\href{https://ncatlab.org/nlab/show/monoid#as_a_oneobject_category}
     {Monoid as a one-object category}) Given a monoid $(M, \cdot, 1)$,
     we can construct its corresponding category as follows. We write
@@ -190,7 +192,7 @@ We say that a function $f: X \to Y$ is:\\~\\
     the category $\catname{B}M$ follow directly from the associative and
     identity laws, respectively, satisfied by the monoid $(M, \cdot, 1)$.
     This shows any monoid can be seen or interpreted as a one-object category.
-\end{proof}
+\end{solution}
 
 \begin{Exercise}
     Check carefully that preorders correspond exactly to categories in which
@@ -198,7 +200,7 @@ We say that a function $f: X \to Y$ is:\\~\\
     difference between such a category and $\catname{Pos}$. (For example: how
     big can homsets in $\catname{Pos}$ be?)
 \end{Exercise}
-\begin{proof}
+\begin{solution}
 	Let $(P, \le)$ be a preorder. Then, we define the corresponding category
 	$\catname{C}$ as follows. The objects of $\catname{C}$ are the elements of
 	the set $P$, and for all $x, y \in P$, we define a morphism $x \to y$ iff
@@ -214,23 +216,23 @@ We say that a function $f: X \to Y$ is:\\~\\
 	transitivity relation. Therefore, we conclude that every preorder
 	corresponds precisely to a category in which each homset has at most one
 	element.
-\end{proof}
+\end{solution}
 
 \setcounter{Exercise}{9}
 \begin{Exercise}
 	Show that the inverse, if it exists, is unique.
 \end{Exercise}
-\begin{proof}
+\begin{solution}
 	Suppose $i: A \to B$ is an isomorphism, with inverse $j: B \to A$, in a
 	category $\catname{C}$. Suppose $j': B \to A$ is also an inverse of $i$.
 	Then, $j = 1_A \circ j = (j' \circ i) \circ j = j' \circ (i \circ j) =
 	j' \circ 1_B = j'$, and we are done.
-\end{proof}
+\end{solution}
 
 \begin{Exercise}
 	Show that $\cong$ is an equivalence relation on the objects of a category.
 \end{Exercise}
-\begin{proof}
+\begin{solution}
 	Let $\catname{C}$ be some category.\\
 	(\emph{Reflexivity}) For any object $X \in \catname{C}$, $X \cong X$
 	follows from the fact that the identity morphism $1_X: X \to X$ is an
@@ -245,14 +247,14 @@ We say that a function $f: X \to Y$ is:\\~\\
 	implies $X \cong Z$.\\
 	We thus conclude that $\cong$ is an equivalence relation on the objects of
 	a category.
-\end{proof}
+\end{solution}
 
 \begin{Exercise}
 	Verify the claims that isomorphisms in $\catname{Set}$ correspond exactly
 	to bijections, in $\catname{Grp}$ to group isomorphisms, in $\catname{Top}$
 	to homeomorphisms, and in $\catname{Pos}$ to isomorphisms.
 \end{Exercise}
-\begin{proof}
+\begin{solution}
     ($\catname{Set}$) We claim the following:
     \begin{enumerate}
         \item $f: X \to Y$ is injective iff $f$ has a left inverse.
@@ -311,7 +313,7 @@ We say that a function $f: X \to Y$ is:\\~\\
 
     % TODO
     ($\catname{Pos}$)
-\end{proof}
+\end{solution}
 
 \subsection*{Opposite Categories and Duality}
 Given a category $\catname{C}$, the opposite category $\catname{C}^{\mathbf{op}}$
@@ -342,11 +344,11 @@ epic in $\catname{C}$. We say monic and epic are \emph{dual notions}.
     If $P$ is a preorder, for example $(\R, \le)$, describe $P^{\mathbf{op}}$
     explicitly.
 \end{Exercise}
-\begin{proof}
+\begin{solution}
     An arrow $a \le_{P^{\mathbf{op}}} b$ in $P^{\mathbf{op}}$ is precisely the
     arrow $b \le_P a$ in $P$. When $P = (\R, \le)$, $P^{\mathbf{op}}$ describes
     the ``greater than or equal" preorder relation on $\R$.
-\end{proof}
+\end{solution}
 
 \subsection*{Subcategories}
 Let $\catname{C}$ be a category. Suppose we are given the collections
