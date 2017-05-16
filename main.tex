@@ -550,6 +550,21 @@ write $\1$ for the terminal object and $\0$ for the initial object.
        monotone function $(P, \le) \to (\{ \bullet \}, \{ (\bullet, \bullet) \})$,
        defined by $x \mapsto \bullet$ for all $x \in P$. Hence, $(\{ \bullet \},
        \{ (\bullet, \bullet) \})$ is terminal in $\catname{Pos}$.
+       \item For any topological space $(X, T_X)$, the unique empty function
+       \begin{center}
+           $(\emptyset, \{ \emptyset \}) \xrightarrow{(\emptyset, X, \emptyset)}
+           (X, T_X)$
+       \end{center}
+       is continuous, since for every open set $T \in T_X$, its preimage under
+       the aforesaid function is the empty set, which is open. Hence,
+       $(\emptyset, \{ \emptyset \})$ is initial in $\catname{Top}$.\\
+       And, for any topological space $(X, T_X)$, the unique function
+       $(X, T_X) \to (\{ \bullet \}, \{ \emptyset, \{ \bullet \} \})$, defined by
+       $x \mapsto \bullet$ for all $x \in X$, is continuous, since the preimage
+       of $\emptyset$ under the aforesaid function is $\emptyset$, which is open,
+       and the preimage of $\{ \bullet \}$ is $X$, which is also open. Hence,
+       $(\{ \bullet \}, \{ \emptyset, \{ \bullet \} \})$ is terminal in
+       $\catname{Top}$.
    \end{enumerate}
 \end{solution}
 
