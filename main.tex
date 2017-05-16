@@ -467,6 +467,16 @@ $\catname{Set}$ is a lluf subcategory of $\catname{Rel}$.
             we thus conclude $g(z) = h(z)$ for all $z \in \Z$. In other words,
             $g = h$, which implies $i$ is epic.\\
             Clearly, the inclusion map $\N \hookrightarrow \Z$ is not iso.
+            \item[f.] Suppose $f: X \to Y$ is epic in $\catname{Set}$. Then,
+            from an earlier result about $\catname{Set}$, we conclude $f$ is
+            surjective. Now, consider the family of nonempty sets
+            $\{ f^{-1}(b) \}_{b \in B}$. Each of the sets in the family is
+            nonempty, because $f$ is surjective. Therefore, using the Axiom of
+            Choice, we can choose some element from each nonempty set in the
+            family to construct a function $g: Y \to X$, given by $g(y) := x$
+            if $x \in f^{-1}(b)$. In addition, for all $y \in Y$, $(f \circ g)(y)
+            = f(g(y)) = y = 1_Y(y)$, which implies $f \circ g = 1_Y$. This shows
+            $f$ has a right inverse, thus proving $f$ is split epic.
         \end{itemize}
     \end{enumerate}
 \end{solution}
