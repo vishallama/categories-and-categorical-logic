@@ -18,6 +18,8 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\0}{\mathbf{0}}
 \newcommand{\1}{\mathbf{1}}
+\newcommand{\oldemptyset}{\emptyset}
+\renewcommand{\emptyset}{\varnothing}
 
 \newtheorem{prop}{Proposition}
 \newenvironment{solution}
@@ -512,4 +514,24 @@ $\tau_{A}: A \to T$.
 Note that initial and terminal objects are dual notions: $T$ is terminal in
 $\catname{C}$ iff it is initial in $\catname{C}^{\mathbf{op}}$. We sometimes
 write $\1$ for the terminal object and $\0$ for the initial object.
+
+\setcounter{Exercise}{17}
+\begin{Exercise}
+    Verify the following claims. In each case, identify the canonical arrows.
+    \begin{enumerate}
+        \item In $\catname{Set}$, the empty set is an initial object while any
+        one-element set $\{ \bullet \}$ is terminal.
+        \item In $\catname{Pos}$, the poset $(\emptyset, \emptyset)$ is an
+        initial object while $(\{ \bullet \}, \{ (\bullet, \bullet) \})$ is
+        terminal.
+        \item In $\catname{Top}$,  the space $(\emptyset, \{ \emptyset \})$ is
+        an initial object while $(\{ \bullet \}, \{ \emptyset, \{ \bullet \} \})$
+        is terminal.
+        \item In $\catname{Vect}_k$, the one-element space $\{ 0 \}$ is both
+        initial and terminal.
+        \item In a poset, seen as a category, an initial object is a least
+        element, while a terminal object is a greatest element.
+    \end{enumerate}
+\end{Exercise}
+
 \end{document}
