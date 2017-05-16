@@ -543,6 +543,13 @@ write $\1$ for the terminal object and $\0$ for the initial object.
        \{ \bullet \}$ that maps every element of $A$ to $\bullet$ is the unique
        function from $A$ to $\{ \bullet \}$. This establishes that any
        one-element set is terminal in $\catname{Set}$.
+       \item For any poset $(P, \le)$, there exists a unique (empty) monotone
+       function $(\emptyset, \emptyset) \xrightarrow{(\emptyset, P, \emptyset)}
+       (P, \le)$. Hence, the poset $(\emptyset, \emptyset)$ is an initial object
+       in $\catname{Pos}$. And, for any poset $(P, \le)$, there exists a unique
+       monotone function $(P, \le) \to (\{ \bullet \}, \{ (\bullet, \bullet) \})$,
+       defined by $x \mapsto \bullet$ for all $x \in P$. Hence, $(\{ \bullet \},
+       \{ (\bullet, \bullet) \})$ is terminal in $\catname{Pos}$.
    \end{enumerate}
 \end{solution}
 
