@@ -477,6 +477,16 @@ $\catname{Set}$ is a lluf subcategory of $\catname{Rel}$.
             if $x \in f^{-1}(b)$. In addition, for all $y \in Y$, $(f \circ g)(y)
             = f(g(y)) = y = 1_Y(y)$, which implies $f \circ g = 1_Y$. This shows
             $f$ has a right inverse, thus proving $f$ is split epic.
+            \item[g.] It isn't always the case that an arrow which is epic is
+            split epic. For example, in the category $\catname{Mon}$, the
+            inclusion map $\N \hookrightarrow \Z$ is epic (as shown in (e)
+            above.) Now, if we assume that it is also split epic, then there
+            exists a monoid homomorphism $g: \Z \to \N$, such that $i \circ g =
+            1_{\Z}$. This implies $(i \circ g)(-1) = 1_{\Z}(-1)$, which implies
+            $i(g(-1)) = -1$, which implies $g(-1) = -1$, which implies $-1 \in
+            \N$, which is absurd. We thus conclude the aforesaid inclusion map
+            is \emph{not} split epic, even though it is epic. And this proves
+            our original claim.
         \end{itemize}
     \end{enumerate}
 \end{solution}
