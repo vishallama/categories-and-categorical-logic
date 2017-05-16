@@ -16,6 +16,8 @@
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
+\newcommand{\0}{\mathbf{0}}
+\newcommand{\1}{\mathbf{1}}
 
 \newtheorem{prop}{Proposition}
 \newenvironment{solution}
@@ -491,4 +493,16 @@ $\catname{Set}$ is a lluf subcategory of $\catname{Rel}$.
     \end{enumerate}
 \end{solution}
 
+\section{Some Basic Constructions}
+An object $I$ in a category $\catname{C}$ is \emph{\textbf{initial}} if, for
+every object $A$, \emph{there exists a unique arrow} $I \to A$, which we write
+$\iota_{A}: I \to A$.
+
+An object $T$ in a category $\catname{C}$ is \emph{\textbf{terminal}} if, for
+every object $A$, \emph{there exists a unique arrow} $A \to T$, which we write
+$\tau_{A}: A \to T$.
+
+Note that initial and terminal objects are dual notions: $T$ is terminal in
+$\catname{C}$ iff it is initial in $\catname{C}^{\mathbf{op}}$. We sometimes
+write $\1$ for the terminal object and $\0$ for the initial object.
 \end{document}
