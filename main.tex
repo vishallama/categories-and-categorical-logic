@@ -670,5 +670,27 @@ the general definition.
     Verify $\catname{Pair}(A, B)$ is a category, where $A$ and $B$ are arbitrary
     objects in some category.
 \end{Exercise}
+\begin{solution}
+	Let $A$ and $B$ be some arbitrary objects in some category $\catname{C}$.
+	Now, given morphisms $f: (P, p_1, p_2) \to (Q, q_1,	q_2)$ and $g: (Q, q_1,
+	q_2) \to (R, r_1, r_2)$ in $\catname{Pair}(A, B)$, it is easy to check that
+	$g \circ f: P \to R$ in	$\catname{C}$. Also, we have
+	\begin{center}
+		$q_1 \circ f = p_1$, $q_2 \circ f = p_2$
+	\end{center}
+	and
+	\begin{center}
+		$r_1 \circ g = q_1$, $r_2 \circ g = q_2$
+	\end{center}
+	So, $r_1 \circ (g \circ f) = (r_1 \circ g) \circ f = q_1 \circ f = p_1$, and,
+	$r_2 \circ (g \circ f) = (r_2 \circ g) \circ f = q_2 \circ f = p_2$, which
+	implies $g \circ f: (P, p_1, p_2) \to (R, r_1, r_2)$ in $\catname{Pair}(A,B)$.
+	Associativity of morphisms in $\catname{Pair}(A, B)$ follows directly from
+	the associativity of morphisms in $\catname{C}$. Finally, for all
+	$(P, p_1, p_2)$ in $\catname{Pair}(A, B)$, the identity morphism $1_P: P \to
+	P$ is the identity morphism for $(P, p_1, p_2)$, since $p_1 \circ 1_P = p_1$
+	and $p_2 \circ 1_P = p_2$. And, this proves that $\catname{Pair}(A, B)$ is
+	indeed a category.
+\end{solution}
 
 \end{document}
