@@ -640,6 +640,18 @@ can speak of \emph{the} initial object. Similarly for terminal objects.
         Therefore, $g = g \circ 1_A = g \circ (f^{-1} \circ f) = (g \circ f^{-1})
         \circ f = (h \circ f^{-1}) \circ f = h \circ (f^{-1} \circ f) = h \circ
         1_A = h$. This proves uniqueness, and we are done.
+        \item Suppose $A \xrightarrow{f} \0$ is a monomorphism. We claim
+        the unique arrow $\0 \xrightarrow{\iota_A} A$ is the inverse of $f$. To
+        that end, we show $\iota_A$ is both a left and a right inverse of $f$.
+        Indeed, $f \circ \iota_A : \0 \to \0$, and since $\0$ is initial, we
+        must have $f \circ \iota_A = 1_{\0}$, which implies $\iota_A$ is a
+        right inverse of $f$. Now, note $\iota_A \circ f: A \to A$ and
+        $1_A: A \to A$. Also, $f \circ (\iota_A \circ f) = (f \circ \iota_A)
+        \circ f = 1_{\0} \circ f = f = f \circ 1_A$, and since $f$ is left
+        cancellative, we have $\iota_A \circ f = 1_A$, which shows $\iota_A$ is
+        a left inverse of $f$. Thus, $f$ has both a left inverse and a right
+        inverse, implying it is iso, and hence, using the result obtained in (1)
+        above, we conclude $A$ is an initial object in $\catname{C}$.
     \end{enumerate}
 \end{solution}
 
