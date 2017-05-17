@@ -693,4 +693,32 @@ the general definition.
 	indeed a category.
 \end{solution}
 
+We say $(A \times B, \pi_1, \pi_2)$ is a \emph{\textbf{product}} of $A$ and $B$
+if it is \emph{terminal} in $\catname{Pair}(A, B)$. Products are specified by
+triples $A \xleftarrow{\pi_1} A \times B \xrightarrow{\pi_2}$, where $pi_i$'s are
+called \emph{projections}. For economy (and if projections are obvious), we say
+$A \times B$ is the product of $A$ and $B$. We say a category $\catname{C}$ has
+\emph{\textbf{(binary) products}} if each pair of objects $A, B$ has a product
+in $\catname{C}$. Since, products are terminal objects, they are unique up to
+(unique) isomorphism.
+
+Unpacking the uniqueness condition from $\catname{Pair}(A, B)$ back to
+$\catname{C}$, we obtain the following more concise definition of products that
+we use in practice.\\
+
+(\textbf{Equivalent definition of product}) Let $A, B$ be objects in a category
+$\catname{C}$. A product of $A$ and $B$ is an object $A \times B$ together with
+a pair of arrows $A \xleftarrow{\pi_1} A \times B \xrightarrow{\pi_2} B$ such
+that for every triple $A \xleftarrow{f} C \xrightarrow{g} B$, there exists a
+\emph{unique} morphism
+\begin{center}
+	$\langle f, g \rangle : C \to A \times B$
+\end{center}
+such that the corresponding diagram commutes. That is,
+\begin{center}
+	$\pi_1 \circ \langle f, g \rangle = f$\\
+	$\pi_2 \circ \langle f, g \rangle = g$
+\end{center}
+We call $\langle f, g \rangle$ the \emph{pairing} of $f$ and $g$.
+
 \end{document}
