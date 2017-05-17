@@ -591,4 +591,17 @@ write $\1$ for the terminal object and $\0$ for the initial object.
     also a unique relation from $A$ to $\emptyset$.
 \end{solution}
 
+\begin{Exercise}
+    Suppose a monoid, viewed as a category, has either an initial or a terminal
+    object. What must the monoid be?
+\end{Exercise}
+\begin{solution}
+    The category corresponding to a monoid $(M, \cdot, 1_M)$ contains just a
+    single object. If this object is initial, then all morphisms must be the
+    identity morphism on this initial object, which implies $M = \{ 1_M \}$.
+    The argument is similar if the aforesaid object is terminal, which would
+    again imply $M = \{ 1_M \}$. Thus, in either case, the monoid must be the
+    trivial monoid.
+\end{solution}
+
 \end{document}
