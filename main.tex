@@ -609,4 +609,38 @@ A fundamental fact about initial and terminal objects is that they are
 ``universal" definitions. Hence, if initial objects exist in a category, we
 can speak of \emph{the} initial object. Similarly for terminal objects.
 
+\setcounter{Exercise}{21}
+\begin{Exercise}
+    Let $\catname{C}$ be a category with an initial object $\0$. For any object
+    $A$, show the following:
+    \begin{enumerate}
+        \item If $A \cong \0$, then $A$ is an initial object.
+        \item If there exists a monomorphism $f: A \to \0$, then $f$ is an iso,
+        and hence $A$ is initial.
+    \end{enumerate}
+\end{Exercise}
+\begin{solution}
+    \leavevmode
+    \begin{enumerate}
+        \item Suppose $A \cong \0$. Then, there exists an isomorphism $f: A
+        \xrightarrow{\sim} \0$. For any object $B$, there exists a unique
+        morphism $\iota_B: \0 \to B$, and hence, $\iota_B \circ f: A \to B$.
+        This proves the existence of a morphism $A \to B$ for any object $B$
+        in the category. We now show that such a morphism is indeed unique.
+        Let $g, h: A \to B$ be a pair of morphisms for any object $B$ in the
+        category $\catname{C}$. Then, we have
+        \begin{center}
+            $\0 \xrightarrow{f^{-1}} A \xrightarrow{g} B$
+        \end{center}
+        and
+        \begin{center}
+            $\0 \xrightarrow{f^{-1}} A \xrightarrow{h} B$.
+        \end{center}
+        Since $\0$ is initial, we must have $g \circ f^{-1} = h \circ f^{-1}$.
+        Therefore, $g = g \circ 1_A = g \circ (f^{-1} \circ f) = (g \circ f^{-1})
+        \circ f = (h \circ f^{-1}) \circ f = h \circ (f^{-1} \circ f) = h \circ
+        1_A = h$. This proves uniqueness, and we are done.
+    \end{enumerate}
+\end{solution}
+
 \end{document}
