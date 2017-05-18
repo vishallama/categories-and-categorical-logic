@@ -772,6 +772,52 @@ We call $\langle f, g \rangle$ the \emph{pairing} of $f$ and $g$.
         thereby, showing the uniqueness of $\langle f, g \rangle$.\\
         Hence, $A \xleftarrow{\pi_1} A \times B \xrightarrow{\pi_2} B$ is the
         cross product of $A$ and $B$.
+        \item Let $(P, \le)$ and $(Q, \le)$ be posets. Let $(P \times Q, \le)$ be
+        the cartesian product of $P$ and $Q$ with the pointwise order. That is,
+        for all $a, c \in P$ and $b, d \in Q$, $(a, b) \le (c, d)$ iff $a \le c$
+        and $b \le d$. We claim $(P \times Q, \le)$ equipped with the canonical
+        projection functions (which are monotone) is the cross product of $(P,
+        \le)$ and $(Q, \le)$. Given any $(P, \le) \xleftarrow{f} (R, \le)
+        \xrightarrow{g} (Q, \le)$, where $f, g$ are monotone functions, the
+        function $\langle f, g \rangle : (R, \le) \to (P \times Q, \le)$, defined
+        by
+        \begin{center}
+            $r \mapsto (f(r), g(r))$
+        \end{center}
+        is the unique monotone function that makes the following diagram commute:
+        \[
+        \begin{tikzcd}
+            & (R, \le) \arrow[ddl, swap, "f"]
+                \arrow[dd, dashrightarrow, "{\langle f, g \rangle}" description]
+                \arrow[ddr, "g"] & \\
+            & & \\
+            (P, \le) & (P \times Q, \le) \arrow[l, swap, "\pi_1"]
+            \arrow[r, "\pi_2"] & (Q, \le)
+        \end{tikzcd}
+        \]
+        (\emph{Existence}) It is easy to check that $\langle f, g \rangle$ is
+        indeed a set function from $R$ to $P \times Q$. And, for all $r_1, r_2
+        \in R$, if $r_1 \le r_2$, then $f(r_1) \le f(r_2)$ and $g(r_1) \le
+        g(r_2)$ (since $f, g$ are monotone), which implies $(f(r_1), g(r_1)) \le
+        (f(r_2), g(r_2))$, which implies $\langle f, g \rangle (r_1) \le
+        \langle f, g \rangle (r_2)$, which implies $\langle f, g \rangle$ is
+        monotone.\\
+        (\emph{Commutativity}) For all $r \in R$, we have
+        \begin{center}
+            $(\pi_1 \circ \langle f, g \rangle)(r) = f(r)$,\\
+            $(\pi_2 \circ \langle f, g \rangle)(r) = g(r).$
+        \end{center}
+        The above implies that the above diagram does commute.\\
+        (\emph{Uniqueness}) Suppose $h: (R, \le) \to (P \times Q, \le)$ is a
+        monotone function such that $\pi_1 \circ h = f$ and $\pi_2 \circ h = g$.
+        Then, for all $r \in R$, $\pi_1 \circ h (r)= f(r)$ and $\pi_2 \circ h
+        (r)= g(r)$, which imply $\pi_1(h(r)) = f(r)$ and $\pi_2(h(r)) = g(r)$,
+        which imply $h(r) = (f(r), g(r))$, which implies $h(r) = \langle f, g
+        \rangle (r)$, which implies $h = \langle f, g \rangle$, thus showing
+        that $\langle f, g \rangle$ with the commutativity property is indeed
+        unique.\\
+        Hence, we conclude the cartesian product $(P \times Q, \le)$ with the
+        pointwise order is the product of any posets $(P, \le)$ and $(Q, \le)$.
     \end{enumerate}
 \end{solution}
 
