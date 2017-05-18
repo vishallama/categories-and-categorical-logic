@@ -85,10 +85,10 @@ We say that a function $f: X \to Y$ is:\\~\\
 	Show that $f: X \to Y$ is surjective iff it is epic.
 \end{Exercise}
 \begin{solution}
-	($\implies$) Suppose $f: X \to Y$ is epic. And, assume, for the sake of contradiction,
-	$f$ is \emph{not} surjective. Then, there exists some $y_0 \in Y$, such
-	that, for all $x \in X$, $f(x) \ne y_0$. Define mappings $g, h: Y \to Y \cup \{ Y \}$
-	by:
+	($\implies$) Suppose $f: X \to Y$ is epic. And, assume, for the sake of
+	contradiction, $f$ is \emph{not} surjective. Then, there exists some $y_0
+	\in Y$, such that, for all $x \in X$, $f(x) \ne y_0$. Define mappings
+	$g, h: Y \to Y \cup \{ Y \}$ by:
 	\begin{center}
 		$g(y) := y$\\~\\
 		$h(y) :=
@@ -98,7 +98,8 @@ We say that a function $f: X \to Y$ is:\\~\\
 		\end{cases}$
 	\end{center}
 	Note that $g \ne h$.\\
-	Then, for all $x \in X$, $(g \circ f)(x) = g(f(x)) = h(f(x)) = (h \circ f)(x)$.
+	Then, for all $x \in X$, $(g \circ f)(x) = g(f(x)) = h(f(x)) = (h \circ f)
+	(x)$.
 	This implies $g \circ f = h \circ f$, which implies $g = h$, since $f$ is
 	epic. The last conclusion contradicts the fact that $g = h$. Thus, we
 	conclude $f$ is	surjective.\\~\\
@@ -458,7 +459,8 @@ $\catname{Set}$ is a lluf subcategory of $\catname{Rel}$.
             inclusion map is monic.\\
             We now show the inclusion map is epic. First, assume, for all
             monoid homomorphisms $g, h: (\Z, +, 0) \to (X, \star, 1_X)$,
-            $g \circ i = h \circ i$. Then, for all $n \in \N$, $(g \circ i)(n) = (h \circ i)(n)$, which
+            $g \circ i = h \circ i$. Then, for all $n \in \N$, $(g \circ i)(n)
+            = (h \circ i)(n)$, which
             implies $g(i(n)) = h(i(n))$, which implies $g(n) = h(n)$. We now
             claim that for all $n \ge 1$, $g(-n) = h(-n)$. To that end, we use
             induction on $n$. Note that $g(-1) = g(-1) \star 1_X = g(-1) \star
