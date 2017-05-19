@@ -830,4 +830,28 @@ We call $\langle f, g \rangle$ the \emph{pairing} of $f$ and $g$.
     \end{enumerate}
 \end{solution}
 
+The following proposition shows that the uniqueness of the pairing arrow can be
+specified purely equationally by the equation:
+\begin{center}
+    $\forall h: C \to A \times B.\, h = \langle \pi_1 \circ h, \pi_2 \circ h
+    \rangle$
+\end{center}
+
+\setcounter{prop}{26}
+\begin{prop}
+    For any triple $A \xleftarrow{\pi_1} A \times B \xrightarrow{\pi_2} B$, the
+    following statements are equivalent:
+    \begin{itemize}
+        \item[(I)] For any triple $A \xleftarrow{f} C \xrightarrow{g} B$, there
+        exists a unique morphism $\langle f, g \rangle : C \to A \times B$ such
+        that $\pi_1 \circ \langle f, g \rangle = f$ and $\pi_2 \circ \langle f,
+        g \rangle = g$.
+        \item[(II)] For any triple $A \xleftarrow{f} C \xrightarrow{g} B$, there
+        exists a morphism $\langle f, g \rangle : C \to A \times B$ such that
+        $\pi_1 \circ \langle f, g \rangle = f$ and $\pi_2 \circ \langle f, g
+        \rangle = g$, and moreover, for any $h: C \to A \times B$,  $h =
+        \langle \pi_1 \circ h, \pi_2 \circ h \rangle$.
+    \end{itemize}
+\end{prop}
+
 \end{document}
