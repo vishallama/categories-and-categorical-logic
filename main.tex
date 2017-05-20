@@ -915,4 +915,28 @@ The following proposition provides some useful properties of products.
     \end{enumerate}
 \end{proof}
 
+\textbf{General Products.} The notion of products can be generalized to
+arbitrary arities as follows. In a category $\catname{C}$, a product for a
+family of objects  $\{ A_i \}_{i \in I}$ is an object $P$ and morphisms
+\begin{center}
+    $p_i: P \to A_i$ ($i \in I$)
+\end{center}
+such that, for all objects $B$ and arrows
+\begin{center}
+    $f_i: B \to A_i$ ($i \in I$)
+\end{center}
+there is a \emph{unique} arrow $g: B \to P$ such that, for all $i \in I$, the
+following diagram commutes
+\[
+\begin{tikzcd}
+    B \arrow[rr, dashrightarrow, "g"] \arrow[ddr, swap, "f_i"]
+      & & P \arrow[ddl, "p_i"] \\
+    & & \\
+    & A_i &
+\end{tikzcd}
+\]
+Again, if such a product exists, it is unique up to (unique) isomorphism. We
+write $P = \prod_{i \in I} A_i$ for the product object, and $g = \langle f_i
+\mid i \in I \rangle$ for the unique morphism in the definition.
+
 \end{document}
