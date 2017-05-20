@@ -900,5 +900,19 @@ The following proposition provides some useful properties of products.
         q \circ g \rangle$.
     \end{enumerate}
 \end{prop}
+\begin{proof}
+\leavevmode
+    \begin{enumerate}
+        \item Note $\langle f, h \rangle \circ h : A' \to B \times C$.
+        Therefore, by (II) of Proposition 27, $\langle f, h \rangle \circ h =
+        \langle \pi_1 \circ (\langle f, g \rangle \circ h), \pi_2 \circ
+        (\langle f, g \rangle \circ h) \rangle = \langle f \circ h, f \circ g
+        \rangle$.
+        \item $(p \times q) \circ \langle f, g \rangle = \langle p \circ \pi_1,
+        q \circ \pi_2 \rangle \circ \langle f, g \rangle = \langle p \circ
+        \pi_1 \circ \langle f, g \rangle, q \circ \pi_2 \circ \langle f, g
+        \rangle = \langle p \circ f, q \circ g \rangle$.
+    \end{enumerate}
+\end{proof}
 
 \end{document}
