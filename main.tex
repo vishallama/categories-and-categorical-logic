@@ -853,5 +853,31 @@ specified purely equationally by the equation:
         \langle \pi_1 \circ h, \pi_2 \circ h \rangle$.
     \end{itemize}
 \end{prop}
+\begin{proof}
+    ((I) $\implies$ (II)) Suppose (I) holds. Assume $A \xleftarrow{f} C
+    \xrightarrow{g} B$. Then, by (I), there exists a (unique) morphism $\langle
+    f, g \rangle : C \to A \times B$ such that $\pi_1 \circ \langle f, g \rangle
+    = f$ and $\pi_2 \circ \langle f, g \rangle = g$. Now, let $h: C \to A
+    \times B$. Note $A \xleftarrow{\pi_1 \circ h} C \xrightarrow{\pi_2 \circ h}
+    B$. Thus, by (I), there exists a unique morphism $\langle \pi_1 \circ h,
+    \pi_2 \circ h \rangle : C \to A \times B$ such that
+    \begin{center}
+        $\pi_1 \circ \langle \pi_1 \circ h, \pi_2 \circ h \rangle =
+        \pi_1 \circ h$,\\
+        $\pi_2 \circ \langle \pi_1 \circ h, \pi_2 \circ h \rangle =
+        \pi_2 \circ h$.
+    \end{center}
+    The above implies $h = \langle \pi_1 \circ h, \pi_2 \circ h \rangle$. This
+    proves (II).
+
+    ((II) $\implies$ (I)) Suppose (II) holds. Assume $A \xleftarrow{f} C
+    \xrightarrow{g} B$. Then, by (II), there exists a morphism $\langle f, g
+    \rangle : C \to A \times B$ such that $\pi_1 \circ \langle f, g \rangle =
+    f$ and $\pi_2 \circ \langle f, g \rangle = g$. We claim such a morphism is
+    unique. So, suppose $h: C \to A \times B$ such that $\pi_1 \circ h = f$ and
+    $\pi_2 \circ h = g$. Then, by (II), we have $h = \langle \pi_1 \circ h,
+    \pi_2 \circ h \rangle$, which implies $h = \langle f, g \rangle$. This
+    proves (I), and our proof is complete.
+\end{proof}
 
 \end{document}
