@@ -958,7 +958,17 @@ write $P = \prod_{i \in I} A_i$ for the product object, and $g = \langle f_i
     finite products.
 \end{Exercise}
 \begin{solution}
-
+    Suppose $\catname{C}$ is a category with binary and nullary products. We
+    claim, for all $n \in \N$, $P_n = \prod_{i=1}^{n} A_i$ with the
+    corresponding projection functions $p_i: P \to A_i$, where $A_i$ is an
+    object in $\catname{C}$, exists. We use induction on $n$ to prove our
+    claim. (\emph{Base case}) For $n = 0$, $P$ is the nullary product, which
+    exists by assumption. (\emph{Inductive case}) Now, suppose a product
+    $P_n$ exists for some $n \ge 0$. Then, $P_{n+1} = \prod_{i=1}^{n+1} A_i =
+    \prod_{i=1}^{n} A_i \times A_{n+1} = P_n \times A_{i+1}$, which is a binary
+    product of objects, which exists due to the fact that $\catname{C}$ has
+    binary products and that $P_n$ exists (from our inductive hypothesis.)
+    Hence, by induction, $P_n$ exists for all $n \in \N$.
 \end{solution}
 
 \end{document}
