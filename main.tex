@@ -970,5 +970,33 @@ write $P = \prod_{i \in I} A_i$ for the product object, and $g = \langle f_i
     binary products and that $P_n$ exists (from our inductive hypothesis.)
     Hence, by induction, $P_n$ exists for all $n \in \N$.
 \end{solution}
+~\\
+\emph{\textbf{Coproducts}}. The dual notion to products are coproducts.
+Formally, coproducts in a category $\catname{C}$ are just products in
+$\catname{C}^{\mathbf{op}}$, interpreted back in $\catname{C}$.
+
+Let $A, B$ be objects in a category $\catname{C}$. A \emph{coproduct} of $A$
+and $B$ is an object $A + B$ together with a pair of arrows $A \xrightarrow{i_A}
+A + B \xleftarrow{i_B} B$, such that for every triple $A \xrightarrow{f} C
+\xleftarrow{g} B$, there exists a unique morphism
+\begin{center}
+    $[f, g]: A + B \to C$
+\end{center}
+such that the following diagram commutes.
+\[
+\begin{tikzcd}
+    A \arrow[r, "i_A"] \arrow[ddr, swap, "f"] &
+        A + B \arrow[dd, dashed, "{[f, g]}" description] &
+        B \arrow[l, swap, "i_B"] \arrow[ddl, "g"] \\
+    & & \\
+    & C &
+\end{tikzcd}
+\]
+We call $i_A$ and $i_B$ \emph{injections} and $[f, g]$ the \emph{copairing} of
+$f$ and $g$. As with pairings, the uniqueness of copairings can be specified
+by an equation:
+\begin{center}
+    $\forall h: A + B \to C.\, h = [h \circ i_A, h \circ i_B]$
+\end{center}
 
 \end{document}
