@@ -1084,4 +1084,26 @@ We say $(A + B, i_A, i_B)$ is a \textbf{coproduct} of $A$ and $B$ if it is
 \emph{initial} in $\catname{Copair}(A, B)$.
 \end{solution}
 
+\subsection*{Pullbacks and Equalisers}
+We consider two further constructions of interest: \emph{pullbacks} and
+\emph{equalisers}.\\
+
+\textbf{Pullbacks}. Consider a pair of morphisms $A \xrightarrow{f} C
+\xleftarrow{g} B$. The \emph{\textbf{pullback}} of $f$ along $g$ is a pair
+$A \xleftarrow{p} D \xrightarrow{q} B$ such that $f \circ p = g \circ q$, and,
+for any pair $A \xleftarrow{p'} D' \xrightarrow{q'} B$ such that $f \circ p' =
+g \circ q'$, there exists a unique $h: D' \to D$ such that the following
+diagram commutes.
+\[
+\begin{tikzcd}
+    D' \arrow[drr, bend left, "q'"]
+       \arrow[ddr, bend right, "p'"]
+       \arrow[dr, dashed, "h"] & & \\
+    & D \arrow[r, "q"]
+        \arrow[d, swap, "p"]
+    & B \arrow[d, "g"] \\
+    & A \arrow[r, swap, "f"] & C
+\end{tikzcd}
+\]
+
 \end{document}
