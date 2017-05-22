@@ -1056,4 +1056,33 @@ by an equation:
     \end{enumerate}
 \end{solution}
 
+\begin{Exercise}
+    Dually to products, express coproducts as initial objects of a category
+    $\catname{Copair}(A, B)$ of $A, B$-copairings.
+\end{Exercise}
+\begin{solution}
+Let $A, B$ be objects in a category $\catname{C}$. An $A, B$-copairing is a
+triple $A \xrightarrow{p_1} P \xleftarrow{p_2} B$, where $P$ is an object in
+$\catname{C}$. A morphism of $A, B$-copairings $f: (P, p_1, p_2) \to
+(Q, q_1, q2)$ is a morphism $f: P \to Q$ in $\catname{C}$ such that the
+following diagram commutes
+\[
+\begin{tikzcd}
+    & Q & \\
+    & & \\
+    A \arrow[uur, "q_1"]
+      \arrow[r, swap, "p_1"] &
+    P \arrow[uu, swap, "f"] &
+    B \arrow[uul, swap, "q_2"]
+      \arrow[l, "p_2"]
+\end{tikzcd}
+\]
+Then, it is easy to check that $\catname{Copair}(A, B)$ is a category of
+$A, B$-copairings.
+
+We say $(A + B, i_A, i_B)$ is a \textbf{coproduct} of $A$ and $B$ if it is
+\emph{initial} in $\catname{Copair}(A, B)$.
+
+\end{solution}
+
 \end{document}
