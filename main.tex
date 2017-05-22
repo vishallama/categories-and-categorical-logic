@@ -999,4 +999,24 @@ by an equation:
     $\forall h: A + B \to C.\, h = [h \circ i_A, h \circ i_B]$
 \end{center}
 
+\setcounter{Exercise}{31}
+\begin{Exercise}
+    A coproduct in $\catname{Set}$ is given by \emph{disjoint union} of sets,
+    which can be defined concretely, \emph{e.g.} by
+    \begin{center}
+        $X + Y := (\{ 1 \} \times X) \bigcup (\{ 2 \} \times Y)$
+    \end{center}
+    We can define \emph{injections}
+    \begin{center}
+        $X \xrightarrow{i_X} X + Y \xleftarrow{i_Y} Y$\\
+        $i_X(x) := (1, x), \q i_Y(y) := (2, y)$.
+    \end{center}
+    Also, given functions $f: X \to Z$ and $g: Y \to Z$, we can define
+    \begin{center}
+        $[f, g]: X + Y \to Z$\\
+        $[f, g](1, x) := f(x), \q [f, g](2, y) := g(y)$.
+    \end{center}
+    Check that the above construction does yield coproducts in $\catname{Set}$.
+\end{Exercise}
+
 \end{document}
