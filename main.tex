@@ -1018,5 +1018,17 @@ by an equation:
     \end{center}
     Check that the above construction does yield coproducts in $\catname{Set}$.
 \end{Exercise}
+\begin{solution}
+    For all $x \in X$, $([f, g] \circ i_X)(x) = [f, g](i_X(x)) = [f, g](1, x) =
+    f(x)$, and, for all $y \in Y$, $([f, g] \circ i_Y)(y) = [f, g](i_Y(y)) =
+    [f, g](2, y) = g(y)$. Therefore, $[f, g] \circ i_X = f$ and $[f, g] \circ
+    i_Y = g$, proving that the corresponding diagram is indeed commutative. Let
+    $h: X + Y \to Z$ be such that $h \circ i_X = f$ and $h \circ i_Y = g$. Then,
+    for all $x \in X$ and $y \in Y$, $(h \circ i_X)(x) = f(x)$ and $(h \circ
+    i_Y)(y) = g(y)$, which imply $h(1, x) = [f, g](1, x)$ and $h(2, g) = [f, g]
+    (2, y)$, which imply $h = [f, g]$, thus showing $[f, g]$ is indeed unique.
+    This shows $X \xrightarrow{i_X} X + Y \xleftarrow{i_Y} Y$ as defined is a
+    coproduct of $X$ and $Y$, for any two objects $X, Y$ in $\catname{C}$.
+\end{solution}
 
 \end{document}
