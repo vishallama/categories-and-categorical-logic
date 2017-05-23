@@ -1106,4 +1106,36 @@ diagram commutes.
 \end{tikzcd}
 \]
 
+\emph{\textbf{Examples of pullbacks}}:
+\begin{itemize}
+    \item In $\catname{Set}$, the pullback of $A \xrightarrow{f} C
+    \xleftarrow{g} B$ is defined as a \emph{subset of the cartesian product}:
+    \begin{center}
+        $A \times_C B = \{ (a, b) \in A \times B \mid f(a) = g(b) \}$.
+    \end{center}
+    For example, consider a category $\catname{C}$ with
+    \begin{center}
+        $\text{Ar}(\catname{C}) \xrightarrow{\text{dom}} \text{Ob}(\catname{C})
+        \xleftarrow{\text{cod}} \text{Ar}(\catname{C})$.
+    \end{center}
+    Then, the pullback of \textbf{dom} along \textbf{cod} is the set of
+    \emph{composable morphisms, i.e.} pairs of morphisms $(f, g)$ in
+    $\catname{C}$ such that $f \circ g$ is well-defined.
+    \item In $\catname{Set}$ again, subsets (\emph{i.e.} inclusion maps) pull
+    back to subsets:
+    \[
+    \begin{tikzcd}
+        f^{-1}(U)
+            \arrow[r]
+            \arrow[dd, hook] &
+        U
+            \arrow[dd, hook] \\
+          & \\
+        X
+            \arrow[r, swap, "f"] &
+        Y
+    \end{tikzcd}
+    \]
+\end{itemize}
+
 \end{document}
