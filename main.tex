@@ -1263,5 +1263,20 @@ equationally:
 Why is $\widehat{e \circ k}$ well-defined for any $k: D \to E$? Prove that
 the above equation is equivalent to the uniqueness requirement.
 \end{Exercise}
+\begin{solution}
+~\\
+(Uniqueness requirement $\implies$ equation) Suppose the uniqueness requirement
+is satisfied. Assume $k: D \to E$. Then, $e \circ k : D \to A$. Therefore, there
+exists a unique $l : D \to E$ such that $e \circ l = e \circ k$. Now, note $l =
+k$ and $l = \widehat{e \circ k}$ (the latter from the satisfaction of the
+uniqueness requirement) both satisfy the previous equation, which implies $k =
+\widehat{e \circ k}$.\\
+(Equation $\implies$ uniqueness requirement) Suppose $\forall k : D \to E,
+\widehat{e \circ k} = k$. Let $h : D \to A$ such that $f \circ h = g \circ h$,
+and assume $\hat{h} : D \to E$ such that $e \circ \hat{h} = h$. We show such an
+arrow $\hat{h}$ is unique. To that end, suppose $l : D \to E$ such that $e \circ
+l = h$. Then, $\hat{h} = \widehat{e \circ l} = l$, which is what we set out to
+proof, and we are done.
+\end{solution}
 
 \end{document}
