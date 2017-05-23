@@ -1229,5 +1229,33 @@ morphism $h: D_1 \to D_2$ such that the following diagram commutes.
 We can thus form a category $\catname{Cone}(f, g)$. A pullback of $f$ along $g$,
 if it exists, is exactly a terminal object in $\catname{Cone}(f, g)$. This also
 shows the uniqueness of pullbacks up to unique isomorphism.
+~\\
+
+\textbf{Equalisers.} Consider a pair of parallel arrows
+\begin{tikzcd}
+    A \arrow[r, shift left, "f"]
+      \arrow[r, swap, shift right, "g"]
+      & B
+\end{tikzcd}.
+An \emph{\textbf{equaliser}} of $(f, g)$ is an arrow $e: E \to A$ such that
+$f \circ e = g \circ e$, and for any arrow $h: D \to A$ such that $f \circ h =
+g \circ h$, there is a unique arrow $\hat{h}: D \to E$ so that $h = e \circ
+\hat{h}$. That is, the following diagram commutes.
+\[
+\begin{tikzcd}
+    E \arrow[r, "e"]
+      & A \arrow[r, shift left, "f"]
+          \arrow[r, swap, shift right, "g"]
+          & B \\
+    D \arrow[u, dashed, "\hat{h}"]
+      \arrow[ur, swap, "h"]
+\end{tikzcd}
+\]
+
+As for products, the uniqueness of the arrow form $D$ to $E$ can be expressed
+equationally:
+\begin{center}
+    $\forall k : D \to E. \,\, \widehat{e \circ k} = k$.
+\end{center}
 
 \end{document}
