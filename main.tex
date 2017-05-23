@@ -1145,5 +1145,48 @@ diagram commutes.
     \xrightarrow{\tau_A} \1 \xleftarrow{\tau_B} B$ is the product of $A$ and $B$,
     if it exists.
 \end{Exercise}
+\begin{solution}
+    Suppose $\catname{C}$ is a category with a terminal object $\1$. Assume, for
+    any $A, B \in \mathbf{Ob}(\catname{C})$, their product $A \xleftarrow{\pi_1}
+    A \times B \xrightarrow{\pi_2} B$ exists. We show that this product is the
+    pullback of $A \xrightarrow{\tau_A} \1 \xleftarrow{\tau_B} B$. First, note
+    $\tau_A \circ \pi_1 : A \times B \to \1$ and $\tau_B \circ \pi_w : A \times
+    B \to \1$, but since $\1$ is terminal, we have $\tau_A \circ \pi_1 = \tau_B
+    \circ \pi_2$. That is, the following diagram commutes.
+    \[
+    \begin{tikzcd}
+        A \times B
+        \arrow[r, "\pi_2"]
+        \arrow[d, swap, "\pi_1"] &
+        B
+        \arrow[d, "\tau_B"] \\
+        A
+        \arrow[r, swap, "\tau_A"] &
+        \1
+    \end{tikzcd}
+    \]
+    Now, for any pair $A \xleftarrow{f} C \xrightarrow{g} B$, we again have
+    $\tau_A \circ f = \tau_B \circ g$, since $\1$ is terminal. Also, there
+    exists a unique morphism $\langle f, g \rangle : C \to A \times B$ such
+    that $\pi_1 \circ \langle f, g \rangle = f$ and  $\pi_2 \circ \langle f, g
+    \rangle = g$, which implies the following diagram commutes.
+    \[
+    \begin{tikzcd}
+        C
+        \arrow[ddr, swap, bend right, "f"]
+        \arrow[drr, bend left, "g"]
+        \arrow[dr, dashed, "{\langle f, g \rangle}" description] & & \\
+        & A \times B
+        \arrow[r, "\pi_2"]
+        \arrow[d, swap, "\pi_1"] &
+        B
+        \arrow[d, "\tau_B"] \\
+        & A
+        \arrow[r, swap, "\tau_A"] &
+        \1
+    \end{tikzcd}
+    \]
+    And, this completes our proof.
+\end{solution}
 
 \end{document}
