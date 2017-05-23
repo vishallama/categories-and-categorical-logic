@@ -1189,4 +1189,45 @@ diagram commutes.
     And, this completes our proof.
 \end{solution}
 
+Just as for products, pullbacks can equivalently be described as terminal
+objects in suitable categories. Given a pair of morphisms $A \xrightarrow{f} C
+\xleftarrow{g} B$, we define an $(f, g)$-\emph{cone} to be a triple $(D, p, q)$
+such that the following diagram commutes.
+\[
+\begin{tikzcd}
+    D
+    \arrow[r, "q"]
+    \arrow[d, swap, "p"]
+    &
+    B
+    \arrow[d, "g"] \\
+    A
+    \arrow[r, swap, "f"]
+    &
+    C
+\end{tikzcd}
+\]
+A morphism of $(f, g)$-cones $h: (D_1, p_1, q_1) \to (D_2, p_2, q_2)$ is a
+morphism $h: D_1 \to D_2$ such that the following diagram commutes.
+\[
+\begin{tikzcd}
+    &
+    D_1
+    \arrow[dl, swap, "p_1"]
+    \arrow[d, "h"]
+    \arrow[dr, "q_1"]
+    & \\
+    A
+    &
+    D_2
+    \arrow[l, "p_2"]
+    \arrow[r, "q_2"]
+    &
+    B
+\end{tikzcd}
+\]
+We can thus form a category $\catname{Cone}(f, g)$. A pullback of $f$ along $g$,
+if it exists, is exactly a terminal object in $\catname{Cone}(f, g)$. This also
+shows the uniqueness of pullbacks up to unique isomorphism.
+
 \end{document}
