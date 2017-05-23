@@ -1279,4 +1279,22 @@ l = h$. Then, $\hat{h} = \widehat{e \circ l} = l$, which is what we set out to
 proof, and we are done.
 \end{solution}
 
+\emph{\textbf{Example of equaliser}}: In $\catname{Set}$, the equaliser of $f,
+g$ is given by the inclusion
+\begin{center}
+    $\{ x \in A \mid f(x) = g(x) \} \hookrightarrow A$.
+\end{center}
+This allows \emph{equationally defined subsets} to be defined as equalisers.
+For example, consider the pairs of maps
+\begin{tikzcd}
+    \R^2 \arrow[r, shift left, "f"]
+         \arrow[r, shift right, swap, "g"]
+         & \R,
+\end{tikzcd}
+where
+\begin{center}
+    $f : (x, y) \mapsto x^2 + y^2, \qq g : (x, y) \mapsto 1$.
+\end{center}
+Then, the equaliser is the unit circle as a subset of $\R^2$.
+
 \end{document}
