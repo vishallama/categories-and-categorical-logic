@@ -1318,4 +1318,33 @@ The notions introduced so far are all special cases of a general notion of
 An import aspect of studying any kind of mathematical structure is to
 determine what limits and colimits the category of such structures has.
 
+\subsection*{Exercises}
+\leavevmode
+\begin{enumerate}
+    \item Give an example of a category where some pair of objects lacks a
+    product or coproduct.
+
+    \item (\emph{Pullback lemma}) Consider the following commutative diagram.
+    \[
+    \begin{tikzcd}
+        A \arrow[r, "f"]
+          \arrow[d, swap, "u"]
+          & B \arrow[r, "g"]
+              \arrow[d, "v"]
+          & C \arrow[d, "w"] \\
+        D \arrow[r, swap, "h"]
+          & E \arrow[r, swap, "i"]
+          & F
+    \end{tikzcd}
+    \]
+    Given that the right hand square $BCEF$ and the outer square $ACDF$ are
+    pullbacks, prove that the left hand square $ABDE$ is a pullback.
+
+    \item Consider $A \xrightarrow{f} C \xleftarrow{g} B$ with pullback
+    $A \xleftarrow{p} D \xrightarrow{q} B$. For each $A \xleftarrow{p'} D'
+    \xrightarrow{q'} B$ with $f \circ p' = g \circ q'$, let $\phi(p', q'): D'
+    \to D$ be the arrow dictated by the pullback condition. Express uniqueness
+    of $\phi(p', q')$ equationally.
+\end{enumerate}
+
 \end{document}
