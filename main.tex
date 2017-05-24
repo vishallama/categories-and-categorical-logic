@@ -1458,6 +1458,31 @@ for each pair of objects $A, B$ of $\catname{C}$, there is a well-defined map
 \end{center}
 
 The conditions expressing preservation of composition and identities are called
-\emph{functoriality}.
+\emph{functoriality}.\\
+
+\textbf{Examples of functors.}
+\begin{enumerate}
+    \item Let $(P, \le)$ and $(Q, \le)$ be preorders (seen as categories.) A
+    functor $F: (P, \le) \to (Q, \le)$ is specified by an object-map, $F: P \to
+    Q$, say, and an appropriate arrow-map. The arrow-map corresponds to the
+    condition:
+    \begin{center}
+        $\forall p_1, p_2 \in P. \,\, p_1 \le p_2 \implies F(p_1) \le F(p_2)$,
+    \end{center}
+    \emph{i.e.} to monotonicity of $F$. Moreover, the functoriality conditions
+    are trivial, since in the codomain $(Q, \le)$, all homsets are singletons.\\
+    Hence, a functor between preorders is just a monotone map.
+
+    \item Let $(M, \cdot, 1)$ and $(N, \cdot, 1)$ be monoids. A functor $F:
+    (M, \cdot, 1) \to (N, \cdot, 1)$ is specified by a trivial object-map (since
+    monoids are categories with a single object) and an arrow-map, $F: M \to N$,
+    say. The functoriality conditions correspond to
+    \begin{center}
+        $\forall m_1, m_2 \in M. \,\, F(m_1 \cdot m_2) = F(m_1) \cdot F(m_2),
+        \qq F(1) = 1$,
+    \end{center}
+    \emph{i.e.} to $F$ being a monoid homomorphism.\\
+    Hence, a functor between monoids is just a monoid homomorphism.
+\end{enumerate}
 
 \end{document}
