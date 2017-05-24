@@ -1351,6 +1351,75 @@ determine what limits and colimits the category of such structures has.
 \begin{enumerate}
     \item In a discrete category with the naturals as objects, say, any pair
     of natural numbers (objects) lacks either a product or a coproduct.
+
+    \item Suppose the following diagram is commutative.
+    \[
+    \begin{tikzcd}
+    A \arrow[r, "f"]
+      \arrow[d, swap, "u"]
+      & B \arrow[r, "g"]
+          \arrow[d, "v"]
+      & C \arrow[d, "w"] \\
+    D \arrow[r, swap, "h"]
+      & E \arrow[r, swap, "i"]
+      & F
+    \end{tikzcd}
+    \]
+    And, suppose the right hand square $BCEF$ and the outer square $ACDF$ are
+    pullbacks. We claim the left hand square $ABDE$ is a pullback. To that end,
+    let $D \xleftarrow{k} A' \xrightarrow{l} B$ such that $v \circ l = h \circ
+    k \, (\ast)$. Note $D \xleftarrow{k} A' \xrightarrow{g \circ l} C$ and that
+    $(i \circ h) \circ k = i \circ (v \circ l) = (w \circ g) \circ l = w \circ
+    (g \circ l)$. And, since $ACDF$ is a pullback, there exists a unique
+    morphism $p : A' \to A$ making the following diagram commute.
+    \[
+    \begin{tikzcd}
+        A' \arrow[ddr, swap, bend right, "k"]
+           \arrow[drrr, bend left, "g \circ l"]
+           \arrow[dr, dashed, "p"]
+           & & & \\
+        & A \arrow[r, "f"]
+            \arrow[d, swap, "u"]
+        & B \arrow[r, "g"]
+            \arrow[d, "v"]
+        & C \arrow[d, "w"] \\
+        & D \arrow[r, swap, "h"]
+        & E \arrow[r, swap, "i"]
+        & F
+    \end{tikzcd}
+    \]
+    Now, we need only show $f \circ p = l$.\\
+    Note $E \xleftarrow{h \circ k} A' \xrightarrow{g \circ l} C$, and $i \circ
+    (h \circ k) = (i \circ h) \circ k = (i \circ h) \circ (u \circ p) = (i
+    \circ h \circ u) \circ p = (w \circ g \circ f) \circ p = w \circ (g \circ
+    f \circ p) = w \circ (g \circ l)$. Since $BCEF$ is a pullback, there exists
+    a unique morphism $q : A' \to B$ such that
+    \begin{align*}
+        g \circ q &= g \circ l \\
+        v \circ q &= h \circ k
+    \end{align*}
+    Using $(\ast)$ and the commutativity of the above diagram, we see $q = l$
+    and $q = f \circ p$ both satisfy the above set of equations, which implies
+    $f \circ p = l$. Let $p' : A' \to A$ where $f \circ p' = l$ and $u \circ p'
+    = k$. Then, this implies the following diagram commutes.
+    \[
+    \begin{tikzcd}
+        A' \arrow[ddr, swap, bend right, "k"]
+        \arrow[drrr, bend left, "g \circ l"]
+        \arrow[dr, "p'"]
+        & & & \\
+        & A \arrow[r, "f"]
+        \arrow[d, swap, "u"]
+        & B \arrow[r, "g"]
+        \arrow[d, "v"]
+        & C \arrow[d, "w"] \\
+        & D \arrow[r, swap, "h"]
+        & E \arrow[r, swap, "i"]
+        & F
+    \end{tikzcd}
+    \]
+    Since $ACDF$ is a pullback, it implies $p' = p$, from which we conclude
+    $ABDE$ is indeed a pullback.
 \end{enumerate}
 \end{solution}
 
