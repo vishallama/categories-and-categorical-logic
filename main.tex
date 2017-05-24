@@ -1429,4 +1429,35 @@ determine what limits and colimits the category of such structures has.
 \end{enumerate}
 \end{solution}
 
+\section{Functors}
+Part of the ``categorical philosophy" is:
+\begin{center}
+    \emph{Don't just look at the objects; take the morphisms into account too}.
+\end{center}
+
+\subsection*{Basics}
+A ``morphism of categories" is a \emph{functor}.\\
+
+A \emph{\textbf{functor}} $F: \catname{C} \to \catname{D}$ is given by:
+\begin{itemize}
+    \item An object-map, assigning an object $FA$ of $\catname{D}$ to every
+    object $A$ of $\catname{C}$.
+    \item An arrow-map, assigning an arrow $Ff : FA \to FB$ of $\catname{D}$ to
+    every arrow $f: A \to B$ in such a way that composition and identities are
+    preserved:
+    \begin{center}
+        $F(g \circ f) = F(g) \circ F(f), \qq F1_A = 1_{FA}$.
+    \end{center}
+\end{itemize}
+
+We use the same symbol to denote object- and arrow-maps; in practice, this
+never causes confusion. Since functors preserve domains and codomains of arrows,
+for each pair of objects $A, B$ of $\catname{C}$, there is a well-defined map
+\begin{center}
+    $F_{A, B} : \catname{C}(A, B) \to \catname{D}(FA, FB)$.
+\end{center}
+
+The conditions expressing preservation of composition and identities are called
+\emph{functoriality}.
+
 \end{document}
