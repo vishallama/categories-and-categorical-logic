@@ -1543,4 +1543,32 @@ For example, there are evident projection functors
 \begin{center}
     $\catname{C} \leftarrow \catname{C} \times \catname{D} \to \catname{D}$.
 \end{center}
+~\\
+
+\subsection*{Further Examples}
+Set-valued functors.
+
+Many important constructions arise as functors $F: \catname{C} \to
+\catname{Set}$. Here are some examples:
+\begin{itemize}
+    \item If $G$ is a group, a functor $F: G \to \catname{Set}$ is \emph{an
+    action of $G$ on a set}.
+
+    \item If $P$ is a poset representing time, a functor $F: P \to
+    \catname{Set}$ is a notion of \emph{set varying through time}. This is
+    related to \emph{Kripke semantics}, and to \emph{forcing arguments} in set
+    theory.
+
+    \item Recall $2_{\rightrightarrows}$ is the category
+    \begin{tikzcd}
+        \bullet \arrow[r, bend left]
+                 \arrow[r, bend right]
+                 & \bullet
+    \end{tikzcd}.
+    Then, functors $F: 2_{\rightrightarrows} \to \catname{Set}$ correspond to
+    \emph{directed graphs, i.e.} structures $(V, E, s, t)$, where $V$ is a
+    set of vertices, $E$ is a set of edges, and $s, t: E \to V$ specify the
+    source and target vertices of each edge.
+\end{itemize}
+
 \end{document}
