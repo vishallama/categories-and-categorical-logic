@@ -7,6 +7,7 @@
 \usepackage{exercise}
 \usepackage{hyperref}
 \usepackage{tikz-cd}
+\usepackage{bbm}
 
 %% User-defined commands
 \newcommand{\q}{\quad}
@@ -21,6 +22,7 @@
 \newcommand{\oldemptyset}{\emptyset}
 \renewcommand{\emptyset}{\varnothing}
 \newcommand{\dps}{\displaystyle}
+\newcommand{\mbb}[1]{\mathbb{#1}}
 \newcommand{\mc}[1]{\mathcal{#1}}
 
 \newtheorem{prop}{Proposition}
@@ -1558,16 +1560,16 @@ Many important constructions arise as functors $F: \catname{C} \to
     related to \emph{Kripke semantics}, and to \emph{forcing arguments} in set
     theory.
 
-    \item Recall $2_{\rightrightarrows}$ is the category
+    \item Recall $\mathbbm{2}_{\rightrightarrows}$ is the category
     \begin{tikzcd}
         \bullet \arrow[r, bend left]
                  \arrow[r, bend right]
                  & \bullet
     \end{tikzcd}.
-    Then, functors $F: 2_{\rightrightarrows} \to \catname{Set}$ correspond to
-    \emph{directed graphs, i.e.} structures $(V, E, s, t)$, where $V$ is a
-    set of vertices, $E$ is a set of edges, and $s, t: E \to V$ specify the
-    source and target vertices of each edge.
+    Then, functors $F: \mathbbm{2}_{\rightrightarrows} \to \catname{Set}$
+    correspond to \emph{directed graphs, i.e.} structures $(V, E, s, t)$, where
+    $V$ is a set of vertices, $E$ is a set of edges, and $s, t: E \to V$
+    specify the source and target vertices of each edge.
 \end{itemize}
 
 \end{document}
