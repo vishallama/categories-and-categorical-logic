@@ -1515,5 +1515,32 @@ The conditions expressing preservation of composition and identities are called
     topological spaces, and variants of this idea (`(co)homology theories') are
     pervasive throughout modern pure mathematics.
 \end{itemize}
+~\\
 
+\textbf{Functors `of several variables'}
+
+We can generalize the notion of a functor to a mapping from several domain
+categories to a codomain category. For this, we need the following definition.\\
+
+(\emph{\textbf{Product category}}) For categories $\catname{C}, \catname{D}$,
+define the \emph{\textbf{product category}} $\catname{C} \times \catname{D}$ as
+follows. An object in $\catname{C} \times \catname{D}$ is a pair of objects
+from $\catname{C}$ and $\catname{D}$, and an arrow in $\catname{C} \times
+\catname{D}$ is a pair of arrows from $\catname{C}$ and $\catname{D}$.
+Identities and arrow composition are defined componentwise:
+\begin{center}
+    $1_{(A, B)} := (1_A, 1_B), \qq (f, g) \circ (f', g') := (f \circ f',
+    g \circ g')$.
+\end{center}
+~\\
+A functor `of two variables', with domains $\catname{C}$ and $\catname{D}$, to
+$\catname{E}$ is simply a functor
+\begin{center}
+    $F: \catname{C} \times \catname{D} \to \catname{E}$.
+\end{center}
+~\\
+For example, there are evident projection functors
+\begin{center}
+    $\catname{C} \leftarrow \catname{C} \times \catname{D} \to \catname{D}$.
+\end{center}
 \end{document}
