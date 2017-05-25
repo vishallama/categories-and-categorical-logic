@@ -22,6 +22,7 @@
 \newcommand{\oldemptyset}{\emptyset}
 \renewcommand{\emptyset}{\varnothing}
 \newcommand{\dps}{\displaystyle}
+\newcommand{\mc}{\mathcal}
 
 \newtheorem{prop}{Proposition}
 \newenvironment{solution}
@@ -1484,5 +1485,35 @@ The conditions expressing preservation of composition and identities are called
     \emph{i.e.} to $F$ being a monoid homomorphism.\\
     Hence, a functor between monoids is just a monoid homomorphism.
 \end{enumerate}
+
+\textbf{Other examples of functors.}
+\begin{itemize}
+    \item Inclusion of a subcategory, $\catname{C} \hookrightarrow \catname{D}$,
+    is a functor (by taking the identity map for object- and arrow-map.)
+
+    \item The \emph{covariant} powerset functor $\mc{P}: \catname{Set} \to
+    \catname{Set}$:
+    \begin{center}
+        $X \mapsto \mc{P}X, \q (f: X \to Y) \mapsto \mc{P}(f) :=
+        S \mapsto \{ f(x) \mid x \in S \}$.
+    \end{center}
+
+    \item $U: \catname{Mon} \to \catname{Set}$ is the `forgetful' or
+    `underlying' functor which sends a monoid to its set of elements,
+    `forgetting' the algebraic structure, and sends a homomorphism to the
+    corresponding function between sets. There are similar forgetful functors
+    for other categories of structured sets.
+
+    \item (\emph{Group theory examples}) The assignment of the commutator
+    sub-group of a group extends to a functor from $\catname{Grp}$ to
+    $\catname{Grp}$; and the assignment of the quotient by this normal
+    subgroup extends to a functor from $\catname{Grp}$ to $\catname{Ab}$ (the
+    category of abelian groups and group homomorphisms.)
+
+    \item (\emph{Homology}) The basic idea of algebraic topology is that there
+    are functorial assignments of algebraic objects (\emph{i.e.} groups) to
+    topological spaces, and variants of this idea (`(co)homology theories') are
+    pervasive throughout modern pure mathematics.
+\end{itemize}
 
 \end{document}
