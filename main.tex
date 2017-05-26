@@ -1653,5 +1653,38 @@ Functoriality is demonstrated as follows
     &= \langle \pi_1 \circ 1_{A \times B}, \pi_2 \circ 1_{A \times B} \rangle \\
     &= 1_{A \times B}.
 \end{align*}
+~\\
+
+\textbf{The category of categories}\\
+There is a category $\catname{Cat}$ whose objects are categories, and whose
+arrows are functors. Identities in $\catname{Cat}$ are given by identity
+functors:
+\begin{center}
+    $\text{Id}_{\mc{C}}: \mc{C} \to \mc{C} := A \mapsto A, \, f \mapsto f$.
+\end{center}
+
+Composition of functors is defined in the evident way. Note that if $F: \mc{C}
+\to \mc{D}$ and $G: \mc{D} \to \mc{E}$, then, for $f: A \to B$ in $\mc{C}$,
+\begin{center}
+    $G \circ F (f) := G(F(f)) : G(F(A)) \to G(F(B))$.
+\end{center}
+One usually makes some size restriction on the categories, so that\
+$\catname{Cat}$ does not contain itself.
+
+Note that product categories are products in $\catname{Cat}$. For any pair of
+categories $\mc{C}, \mc{D}$, set
+\begin{center}
+    $\mc{C} \xleftarrow{\pi_1} \mc{C} \times \mc{D} \xrightarrow{\pi_2} \mc{D}$
+\end{center}
+where $\mc{C} \times \mc{D}$ the product category (defined previously) and
+$\pi_i$'s the obvious projection functors. For any pair of functors $\mc{C}
+\xleftarrow{F} \mc{E} \xrightarrow{G} \mc{D}$, set
+\begin{center}
+    $\langle F, G \rangle : \mc{E} \to \mc{C} \times \mc{D} :=
+    A \mapsto (FA, GA), \q f \mapsto (Ff, Gf)$.
+\end{center}
+It is easy to check that $\langle F, G \rangle$ is indeed a functor. Moreover,
+satisfaction of the product diagram and uniqueness are shown exactly as in
+$\catname{Set}$.
 
 \end{document}
