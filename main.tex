@@ -22,6 +22,7 @@
 \newcommand{\oldemptyset}{\emptyset}
 \renewcommand{\emptyset}{\varnothing}
 \newcommand{\dps}{\displaystyle}
+\newcommand{\List}{\texttt{List}}
 \newcommand{\mbb}[1]{\mathbb{#1}}
 \newcommand{\mc}[1]{\mathcal{#1}}
 
@@ -1609,5 +1610,26 @@ have domain $E$ and codomain $V$. Then, it is easy to check $F$ is indeed
 functorial, and thus we conclude that each such $F$ corresponds to a directed
 graph, and we are done.
 \end{solution}
+
+\textbf{Example: Lists}\\
+Data-type constructors are functors. As a basic example, we consider lists.
+There is a functor
+\begin{center}
+    $\List : \catname{Set} \to \catname{Set}$
+\end{center}
+which takes a set $X$ to the set of all finite lists (sequences) of elements of
+$X$. $\List$ is functorial: its action on morphisms (\emph{i.e.} functional
+programs) is given by \emph{maplist}:\\
+\begin{center}
+    $\dps \frac{f: X \to Y}{\List(f): \List(X) \to \List(Y)}$\\~\\
+    $\List(f)[x_1, \ldots, x_n] := [f(x_1), \ldots, f(x_n)]$.
+\end{center}
+~\\
+We can upgrade $\List$ to a functor $\texttt{MList}: \catname{Set} \to
+\catname{Mon}$ by mapping each set $X$ to the monoid $(\List(X), \ast,
+\epsilon)$ and $f: X \to Y$ to $\List(f)$, as above. The monoid operation
+$\ast: \List(X) \times \List(X) \to \List(X)$ is list concatenation, and
+$\epsilon$ is the empty list. We call $\texttt{MList}(X)$ the
+\emph{\textbf{free monoid}} over $X$.
 
 \end{document}
