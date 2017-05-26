@@ -1630,6 +1630,28 @@ We can upgrade $\List$ to a functor $\texttt{MList}: \catname{Set} \to
 \epsilon)$ and $f: X \to Y$ to $\List(f)$, as above. The monoid operation
 $\ast: \List(X) \times \List(X) \to \List(X)$ is list concatenation, and
 $\epsilon$ is the empty list. We call $\texttt{MList}(X)$ the
-\emph{\textbf{free monoid}} over $X$.
+\emph{\textbf{free monoid}} over $X$.\\
+
+\textbf{Products as functors}\\
+If a category $\catname{C}$ has binary products, then there is automatically a
+functor
+\begin{center}
+    $\_ \times \_ : \catname{C} \times \catname{C} \to \catname{C}$
+\end{center}
+which takes each pair $(A, B)$ to the product $A \times B$, and each $(f, g)$ to
+\begin{center}
+    $f \times g := \langle f \circ \pi_1, g \circ \pi_2 \rangle$.
+\end{center}
+Functoriality is demonstrated as follows
+\begin{align*}
+    (f \times g) \circ (f' \times g')
+    &= (f \times g) \circ \langle f' \circ \pi_1, g' \circ g' \rangle \\
+    &= \langle f \circ f' \circ \pi_1, g \circ g' \circ \pi_2 \rangle \\
+    &= (f \circ f') \times (g \circ g'), \\
+    1_A \times 1_B
+    &= \langle 1_A \circ \pi_1, 1_B \circ \pi_2 \rangle \\
+    &= \langle \pi_1 \circ 1_{A \times B}, \pi_2 \circ 1_{A \times B} \rangle \\
+    &= 1_{A \times B}.
+\end{align*}
 
 \end{document}
