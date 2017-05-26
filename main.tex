@@ -1572,4 +1572,18 @@ Many important constructions arise as functors $F: \catname{C} \to
     specify the source and target vertices of each edge.
 \end{itemize}
 
+In the first example above, we note that for a group $(G, \cdot, 1)$, a functor
+$F: G \to \catname{Set}$ maps the unique object in the category corresponding
+to $G$ to a set $X$, and each element in $g \in G$ to an endofunction on $X$,
+$g \bullet \_ : X \to X$. Then, functoriality amounts to the
+conditions
+\begin{center}
+    $\forall g, h \in G. \,\, F(g \cdot h) = F(g) \circ F(h), \qq F(1) = 1_X$.
+\end{center}
+That is, for all $g, h \in G$ and all $x \in X$,
+\begin{center}
+    $(g \cdot h) \bullet x = g \bullet (h \bullet x), \qq 1 \bullet x = x$.
+\end{center}
+We therefore see $F$ defines a (\emph{left}) \emph{group action} of $G$ on $X$.
+
 \end{document}
