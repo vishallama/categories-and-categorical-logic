@@ -1590,7 +1590,24 @@ We therefore see $F$ defines a (\emph{left}) \emph{group action} of $G$ on $X$.
 \begin{Exercise}
 Verify that functors $F: \mathbbm{2}_{\rightrightarrows} \to \catname{Set}$
 correspond to directed graphs.
-
 \end{Exercise}
+\begin{solution}
+Let $\mathbbm{2}_{\rightrightarrows} := $
+\begin{tikzcd}
+    A \arrow[r, bend left, "f"]
+    \arrow[r, swap, bend right, "g"]
+    & B
+\end{tikzcd}
+Then, let any functor
+\begin{center}
+    $F: \mathbbm{2}_{\rightrightarrows} \to \catname{Set}$
+\end{center}
+map $A$ to $E$, the set of edges of a directed graph, and, $B$ to $V$, the set
+of vertices of the directed graph. Also, $F$ maps $f$ to the source function,
+and $g$ to the target function, where both the source and target functions
+have domain $E$ and codomain $V$. Then, it is easy to check $F$ is indeed
+functorial, and thus we conclude that each such $F$ corresponds to a directed
+graph, and we are done.
+\end{solution}
 
 \end{document}
