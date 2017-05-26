@@ -1686,5 +1686,32 @@ $\pi_i$'s the obvious projection functors. For any pair of functors $\mc{C}
 It is easy to check that $\langle F, G \rangle$ is indeed a functor. Moreover,
 satisfaction of the product diagram and uniqueness are shown exactly as in
 $\catname{Set}$.
+~\\
+
+\subsection*{Contravariance}
+By definition, the arrow-map of a functor $F$ is \emph{covariant}: it preserves
+the direction of arrows. That is, if $f: A \to B$, then $Ff: FA \to FB$. A
+\emph{contravariant} functor $G$ does exactly the opposite: it reverses the
+direction of arrows. That is, if $f: A \to B$, then $Gf: FB \to FA$. The
+following is a concise way to express contravariance.
+
+Let $\mc{C}, \mc{D}$ be categories. A \emph{\textbf{contravariant}} functor
+$G$ from $\mc{C}$ to $\mc{D}$ is a functor $G: \mc{C}^{\text{op}} \to \mc{D}$.
+(Equivalently, a functor $G: \mc{C} \to \mc{D}^{\text{op}}$.)
+
+More explicitly, a contravariant functor $G$ is given by an assignment of:
+\begin{itemize}
+    \item An object $GA$ in $\mc{D}$ to every object $A$ in $\mc{C}$.
+    \item An arrow $Gf: GB \to GA$ in $\mc{D}$ to every arrow $f: A \to B$ in
+    $\catname{C}$, such that
+    \begin{center}
+        $G(g \circ f) = G(f) \circ G(g), \qq G(1_A) = 1_{GA}$.
+    \end{center}
+\end{itemize}
+Note that functors of several variables can be covariant in some variables and
+contravariant in others, \emph{e.g.}
+\begin{center}
+    $F: \mc{C}^{\text{op}} \times \mc{D} \to \mc{E}$.
+\end{center}
 
 \end{document}
