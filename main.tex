@@ -1755,6 +1755,22 @@ $\catname{Set}$ can be defined:
     We usually write $\mc{C}(A, \_)(f)$ as $\mc{C}(A, f)$. Functoriality
     reduces directly to the basic category axioms: associativity of composition
     and the unit laws for the identity.
+
+    \item There is also a contravariant Hom-functor,
+    \begin{center}
+        $\mc{C}(A, \_) : \mc{C}^{\text{op}} \to \catname{Set}$,
+    \end{center}
+    given by:
+    \begin{center}
+        $\mc{C}(A, \_)(B) := \mc{C}(B, A), \qq
+        \mc{C}(A, \_)(h: C \to B) := g \mapsto g \circ h$.
+    \end{center}
 \end{itemize}
+~\\
+Generalizing both of the above, we obtain a \emph{\textbf{bivariant}}
+Hom-functor,
+\begin{center}
+    $\mc{C}(\_, \_) : \mc{C}^{\text{op}} \times \mc{C} \to \catname{Set}$.
+\end{center}
 
 \end{document}
