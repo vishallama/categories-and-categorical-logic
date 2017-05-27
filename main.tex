@@ -1735,6 +1735,26 @@ contravariant in others, \emph{e.g.}
 The above are both examples of the following idea: Send an object $A$ into
 functions from $A$ into some fixed object. For example, the powerset can be
 written as $\mc{P}(X) = 2^X$, where we think of a subset in terms of its
-characteristic function.
+characteristic function.\\
+
+\textbf{Hom-functors}\\
+We now consider some fundamental examples of $\catname{Set}$-valued functors.
+Given a category $\mc{C}$ and an object $A$ of $\mc{C}$, two functors to
+$\catname{Set}$ can be defined:
+\begin{itemize}
+    \item The covariant Hom-functor at $A$,
+    \begin{center}
+        $\mc{C}(A, \_) : \mc{C} \to \catname{Set}$,
+    \end{center}
+    which is given by (recall that each $\mc{C}(A, B)$ is a set):
+    \begin{center}
+        $\mc{C}(A, \_)(B) := \mc{C}(A, B), \qq
+        \mc{C}(A, \_)(f: B \to C) := g \mapsto f \circ g$.
+    \end{center}
+~\\
+    We usually write $\mc{C}(A, \_)(f)$ as $\mc{C}(A, f)$. Functoriality
+    reduces directly to the basic category axioms: associativity of composition
+    and the unit laws for the identity.
+\end{itemize}
 
 \end{document}
