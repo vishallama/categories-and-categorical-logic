@@ -1778,5 +1778,27 @@ Hom-functor,
     Spell out the definition of $\mc{C}(\_, \_): \mc{C}^{\text{op}} \times
     \mc{C} \to \catname{Set}$. Verify carefully that it is a functor.
 \end{Exercise}
+\begin{solution}
+    We define $\mc{C}(\_, \_): \mc{C}^{\text{op}} \times \mc{C} \to
+    \catname{Set}$ as follows:
+    \begin{center}
+        For all $(A, B)$ in $\mc{C}^{\text{op}} \times \mc{C}$, $\mc{C}(\_,\_)
+        (A, B) := \mc{C}(A, B)$, and \\
+        for all $f: A' \to A$ and $g: B \to B'$, $\mc{C}(\_, \_)(f, g) =
+        h \mapsto g \circ h \circ f$, where $h \in \mc{C}(A, B)$.
+    \end{center}
+    Now, we show the above functor does satisfy the functoriality conditions.
+    Indeed, for all $(A, B), (A', B'), (A'', B'')$ in $\mc{C}^{\text{op}}
+    \times \mc{C}$, if $f: A' \to A, f': A'' \to A', g: B \to B', g': B' \to
+    B''$, then $\mc{C}(\_,\_)(f', g')
+    \circ \mc{C}(\_,\_)(f, g) = (h' \mapsto g' \circ h' \circ f') \circ
+    (h \mapsto g \circ h \circ f) = h \mapsto g' \circ (g \circ h \circ f)
+    \circ f' = h \mapsto (g' \circ g) \circ h \circ (f \circ f') = \mc{C}(\_,
+    \_)(f \circ f', g' \circ g)$. And, for any $(A, B)$ in $\mc{C}^{\text{op}}
+    \times \mc{C}$, we have $\mc{C}(\_, \_)(1_{(A, B)}) = \mc{C}(\_, \_)
+    (1_A, 1_B) = h \mapsto 1_B \circ h \circ 1_B = h \mapsto h = 1_{\mc{C}
+    (A, B)}$. And this establishes that $\mc{C}(\_, \_)$ as defined above is
+    indeed a functor.
+\end{solution}
 
 \end{document}
