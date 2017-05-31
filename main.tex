@@ -1801,4 +1801,27 @@ Hom-functor,
     indeed a functor.
 \end{solution}
 
+\subsection*{Properties of Functors}
+A functor $F: \mc{C} \to \mc{D}$ is said to be:
+\begin{itemize}
+    \item \emph{\textbf{faithful}} if each map $F_{A, B}: \mc{C}(A, B) \to
+    \mc{D}(FA, FB)$ is injective;
+
+    \item \emph{\textbf{full}} if each map $F_{A, B}: \mc{C}(A, B) \to
+    \mc{D}(FA, FB)$ is surjective;
+
+    \item an \emph{\textbf{embedding}} if $F$ is full, faithful, and injective
+    on objects;
+
+    \item an \emph{\textbf{equivalence}} if $F$ is full, faithful, and
+    \emph{essentially surjective, i.e.} for every object $B$ of $\mc{D}$, there
+    is an object $A$ of $\mc{C}$ such that $F(A) \cong B$;
+
+    \item an \emph{\textbf{isomorphism}} if there is a functor $G: \mc{D} \to
+    \mc{C}$ such that
+    \begin{center}
+        $G \circ F = 1_{\mc{C}}, \qq F \circ G = 1_{\mc{D}}$.
+    \end{center}
+\end{itemize}
+
 \end{document}
