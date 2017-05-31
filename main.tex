@@ -1904,6 +1904,40 @@ Prove the following:
     = F(1_B)$, which implies $f \circ g = 1_B$, since $F$ is faithful.
     Similarly, it is easy to check $F(g \circ f) = F(1_A)$, which implies
     $g \circ f = 1_A$. Hence, $f$ is an isomorphism, and we are done.
+
+    \item (Monic) Suppose $F: \mc{C} \to \mc{D}$ is an equivalence. Then, $F$
+    is full, faithful, and essentially surjective. Let $f: A \to B$ in $\mc{C}$
+    be monic. Let $g', h': C' \to FA$ such that $F(f) \circ g' = F(f) \circ h'$.
+    That is, the following diagram commutes:
+    \[
+    \begin{tikzcd}
+        C' \arrow[r, shift left, "g'"]
+           \arrow[r, shift right, swap, "h'"]
+           & FA \arrow[r, "F(f)"]
+                & FB
+    \end{tikzcd}
+    \]
+    We claim $F(f)$ is monic, \emph{i.e.} $F(f)$ is left-cancellative. To that
+    end, since $F$ is essentially surjective, there exists some $C_0$ in
+    $\mc{C}$ such that $F(C_0) \cong C'$. In other words, there exists an
+    isomorphism $k: F(C_0) \xrightarrow{\sim} C'$. In addition, since $F$ is
+    full, there exist $g, h: C_0 \to A$ in $\mc{C}$ such that $F(g) = g' \circ
+    k$ and $F(h) = h' \circ k$. That is, the following diagram commutes:
+    \[
+    \begin{tikzcd}
+    F(C_0) \arrow[r, shift left, "F(g)"]
+    \arrow[r, shift right, swap, "F(h)"]
+    & FA \arrow[r, "F(f)"]
+    & FB
+    \end{tikzcd}
+    \]
+    Therefore, $F(f) \circ F(g) = F(f) \circ F(h)$, which implies $F(f \circ g)
+    = F(f \circ h)$, which implies $f \circ g = f \circ h$ (since $F$ is
+    faithful), which implies $g = h$, since $f$ is monic. Thus, $g' = g' \circ
+    1_{C'} = g' \circ (k \circ k^{-1}) = (g' \circ k) \circ k^{-1} = F(g) \circ
+    k^{-1} = F(h) \circ k^{-1} = (h' \circ k) \circ k^{-1} = h' \circ (k \circ
+    k^{-1}) = h' \circ 1_{C'} = h'$, which shows $F(f)$ is indeed
+    left-cancellative, and we are done.
 \end{enumerate}
 \end{solution}
 
