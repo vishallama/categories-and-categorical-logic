@@ -1881,6 +1881,21 @@ Prove the following:
     $F(f) \circ F(g) = F(f \circ g) = F(1_B) = 1_{FB}$, which implies $F(f)$
     has a right inverse, from which we conclude $F(f)$ is split epic, and we
     are done.
+
+    \item (Monic) Suppose $F: \mc{C} \to \mc{D}$ is a faithful functor, and let
+    $f: A \to B$ in $\mc{C}$ such that $F(f)$ is monic. Assume $g, h: C \to A$
+    such that $f \circ g = f \circ h$. Then, $F(f \circ g) = F(f \circ h)$,
+    which implies $F(f) \circ F(g) = F(f) \circ F(h)$, which implies $F(g) =
+    F(h)$, since $F(f)$ is left-cancellative, and since $F$ is faithful, we
+    have $g = h$, showing $f$ is monic. Hence, we conclude faithful functors
+    preserve monics.\\
+    (Epic) Suppose $F: \mc{C} \to \mc{D}$ is a faithful functor, and let
+    $f: A \to B$ in $\mc{C}$ such that $F(f)$ is epic. Assume $g, h: B \to C$
+    such that $g \circ f = h \circ f$. Then, $F(g \circ f) = F(h \circ f)$,
+    which implies $F(g) \circ F(f) = F(h) \circ F(f)$, which implies $F(g) =
+    F(h)$, since $F(f)$ is right-cancellative, and since $F$ is faithful, we
+    have $g = h$, showing $f$ is epic. Hence, we conclude faithful functors
+    preserve epics.
 \end{enumerate}
 \end{solution}
 
