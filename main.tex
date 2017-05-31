@@ -1864,5 +1864,24 @@ Prove the following:
     products.
 \end{enumerate}
 \end{Exercise}
+\begin{solution}
+\leavevmode
+\begin{enumerate}
+    \item (Isomorphism) Suppose $f: A \to B$ in $\mc{C}$ is an isomorphism.
+    Then, $F(f) \circ F(f^{-1}) = F(f \circ f^{-1}) = F(1_B) = 1_{FB}$. And,
+    $F(f^{-1}) \circ F(f) = F(f^{-1} \circ f) = F(1_A) = 1_{FA}$. Thus, $F(f)$
+    is an isomorphism, and we are done.\\
+    (Split monic) Suppose $f: A \to B$ in $\mc{C}$ is split monic. Then, $f$
+    has a left inverse $g: B \to A$ such that $g \circ f = 1_A$. Therefore,
+    $F(g) \circ F(f) = F(g \circ f) = F(1_A) = 1_{FA}$, which implies $F(f)$
+    has a left inverse, from which we conclude $F(f)$ is split monic, and we
+    are done.\\
+    (Split epic) Suppose $f: A \to B$ in $\mc{C}$ is split epic. Then, $f$
+    has a right inverse $g: B \to A$ such that $f \circ g = 1_B$. Therefore,
+    $F(f) \circ F(g) = F(f \circ g) = F(1_B) = 1_{FB}$, which implies $F(f)$
+    has a right inverse, from which we conclude $F(f)$ is split epic, and we
+    are done.
+\end{enumerate}
+\end{solution}
 
 \end{document}
