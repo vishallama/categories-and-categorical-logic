@@ -1824,4 +1824,27 @@ A functor $F: \mc{C} \to \mc{D}$ is said to be:
     \end{center}
 \end{itemize}
 
+We say categories $\mc{C}$ and $\mc{D}$ are isomorphic, $\mc{C} \cong
+\mc{D}$, if there is an isomorphism between them. This is just the usual notion
+of isomorphism applied to $\catname{Cat}$.
+
+Some examples of functors with various properties are as follows:
+\begin{itemize}
+    \item The forgetful functor $U: \catname{Mon} \to \catname{Set}$ is
+    faithful, but not full. Note not all functions $f: M \to N$ yield an arrow
+    $f: (M, \cdot, 1) \to (N, \cdot, 1)$. Similar properties hold for other
+    forgetful functors.
+
+    \item The free monoid functor $\texttt{MList}: \catname{Set} \to
+    \catname{Mon}$ is faithful, but not full.
+
+    \item The product functor $- \times - : \mc{C} \times \mc{C} \to \mc{C}$
+    is generally neither faithful nor full.
+
+    \item There is an equivalence between $\catname{FDVect}_k$, the category
+    of finite dimensional vector spaces over the field $k$, and
+    $\catname{Mat}_k$, the category of matrices with entries in $k$. These
+    categories are very far from being isomorphic.
+\end{itemize}
+
 \end{document}
