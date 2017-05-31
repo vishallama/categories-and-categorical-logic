@@ -1896,6 +1896,14 @@ Prove the following:
     F(h)$, since $F(f)$ is right-cancellative, and since $F$ is faithful, we
     have $g = h$, showing $f$ is epic. Hence, we conclude faithful functors
     preserve epics.
+
+    \item Suppose $F: \mc{C} \to \mc{D}$ is a full and faithful functor, and
+    let $f: A \to B$ in $\mc{C}$ such that $F(f)$ is an isomorphism. Since $F$
+    is full, there exists some $g: B \to A$ such that $F(g) = F(f)^{-1}$.
+    Therefore, $F(f \circ g) = F(f) \circ F(g) = F(f) \circ F(f)^{-1} = 1_{FB}
+    = F(1_B)$, which implies $f \circ g = 1_B$, since $F$ is faithful.
+    Similarly, it is easy to check $F(g \circ f) = F(1_A)$, which implies
+    $g \circ f = 1_A$. Hence, $f$ is an isomorphism, and we are done.
 \end{enumerate}
 \end{solution}
 
