@@ -25,6 +25,7 @@
 \newcommand{\List}{\texttt{List}}
 \newcommand{\mbb}[1]{\mathbb{#1}}
 \newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\opn}[1]{\operatorname{#1}}
 
 \newtheorem{prop}{Proposition}
 \newenvironment{solution}
@@ -2063,5 +2064,30 @@ isomorphism}}:
 \begin{center}
     $t: F \xrightarrow{\cong} G$.
 \end{center}
+~\\
+\textbf{Examples of natural transformations:}
+\begin{itemize}
+    \item Let $\opn{Id}$ be the identity functor on $\catname{Set}$, and
+    $\times \circ \langle \opn{Id}, \opn{Id} \rangle$ be the functor taking
+    each set $X$ to $X \times X$ and each function $f$ to $f \times f$. Then,
+    there is a natural transformation $\Delta: \opn{Id} \to \times \circ
+    \langle \opn{Id}, \opn{Id} \rangle$ given by:
+    \begin{center}
+        $\Delta_X: X \to X \times X := x \mapsto (x, x)$.
+    \end{center}
+    Naturality amounts to asserting that, for any function $f: X \to Y$, the
+    following diagram commutes:
+    \[
+    \begin{tikzcd}
+        X \arrow[r, "f"]
+          \arrow[d, swap, "\Delta_X"]
+          & Y \arrow[d, "\Delta_Y"]\\
+        X \times X \arrow[r, swap, "f \times f"]
+                   & Y \times Y
+    \end{tikzcd}
+    \]
+    We call $\Delta$ the \emph{diagonal} transformation on $\catname{Set}$. In
+    fact, it is the \emph{only} natural transformation between these functors.
+\end{itemize}
 
 \end{document}
