@@ -2031,4 +2031,37 @@ Show the following:
 \end{enumerate}
 \end{solution}
 
+\section{Natural Transformations}
+Morphisms between functors are \emph{natural transformations}, just as functors
+are morphisms between categories.
+
+\subsection*{Basics}
+Let us define natural transformations.
+
+Let $F, G: \mc{C} \to \mc{D}$ be functors. A \emph{\textbf{natural
+transformation}}
+\begin{center}
+    $t: F \to G$
+\end{center}
+is a family of morphisms in $\mc{D}$ indexed by objects $A$ of $\mc{C}$,
+\begin{center}
+    $\{ t_A : FA \to GA \}_{A \in Ob(\mc{C})}$
+\end{center}
+such that for all $f: A \to B$, the following diagram commutes:
+\[
+\begin{tikzcd}
+    FA \arrow[r, "Ff"]
+       \arrow[d, swap, "t_A"]
+       & FB \arrow[d, "t_B"]\\
+    GA \arrow[r, swap, "Gf"]
+       & GB
+\end{tikzcd}
+\]
+This condition is known as \emph{naturality}.\\
+If each $t_A$ is an isomorphism, we say $t$ is a \emph{\textbf{natural
+isomorphism}}:
+\begin{center}
+    $t: F \xrightarrow{\cong} G$.
+\end{center}
+
 \end{document}
