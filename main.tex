@@ -1989,4 +1989,30 @@ Show the following:
     % TODO: Exercise 50 - Parts (1), (2), and (3)
 \end{solution}
 
+\subsection*{Exercises}
+\leavevmode
+\begin{enumerate}
+    \item Consider the category $\catname{FDVect}_{\R}$ of finite dimensional
+    vector spaces over $\R$, and $\catname{Mat}_{\R}$ of matrices over $\R$.
+    Concretely, $\catname{Mat}_{\R}$ is defined as follows:
+    \begin{center}
+        $Ob(\catname{Mat}_{\R}) := \N$\\
+        $\catname{Mat}_{\R}(n, m) := \{ M \mid M \text{ is an } n \times m
+        \text{ matrix with entries in } \R \}$.
+    \end{center}
+    Thus, objects are natural numbers, and arrows $n \to m$ are $n \times m$
+    real matrices. Composition is matrix multiplication, and the identity on
+    $n$ is the $n \times n$ identity matrix.\\
+    Now, let $F: \catname{Mat}_{\R} \to \catname{FDVect}_{\R}$ be the functor
+    taking each $n$ to the vector space $\R^n$ and each $M: n \to m$ to the
+    linear function
+    \begin{center}
+        $FM: \R^n \to \R^m := (x_1, \ldots, x_n) \mapsto [x_1, \ldots, x_n] M$
+    \end{center}
+    with the $1 \times m$ matrix $[x_1, \ldots, x_n] M$ considered as a vector
+    in $\R^m$. Show that $F$ is full, faithful, and essentially surjective, and
+    hence, $\catname{FDVect}_{\R}$ and $\catname{Mat}_{\R}$ are equivalent
+    categories. Are they isomorphic?
+\end{enumerate}
+
 \end{document}
