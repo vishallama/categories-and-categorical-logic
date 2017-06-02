@@ -2128,6 +2128,30 @@ isomorphism}}:
         &:= [[x_1^1, \ldots, x_{n_1}^1], \ldots, [x_1^k, \ldots, x_{n_k}^k]
         \mapsto [x_1^1, \ldots \ldots, x_{n_k}^k].
     \end{align*}
+
+    \item Consider the functor $P := \times \circ \langle U, U \rangle$ with
+    $U: \catname{Mon} \to \catname{Set}$ being the forgetful functor. That is,
+    \begin{center}
+        $P: \catname{Mon} \to \catname{Set} := (M, \cdot, 1) \mapsto M \times M,
+        \, f \mapsto f \times f$.
+    \end{center}
+    Then, the monoid operation yields a natural transformation $t: P \to U$
+    defined by:
+    \begin{center}
+        $t_{(M, \cdot, 1)}: M \times M \to M := (m, m') \mapsto m \cdot m'$.
+    \end{center}
+    Naturality corresponds to asserting that, for any $f: (M, \cdot, 1) \to
+    (N, \cdot, 1)$, the following diagram commutes:
+    \[
+    \begin{tikzcd}
+        M \times M \arrow[r, "f \times f"]
+                   \arrow[d, swap, "t_M"]
+                   & N \times N \arrow[d, "t_N"] \\
+        M \arrow[r, swap, "f"]
+          & N
+    \end{tikzcd}
+    \]
+    That is, for any $m_1, m_2 \in M$, $f(m_1) \cdot f(m_2) = f(m_1 \cdot m_2)$.
 \end{itemize}
 
 \end{document}
