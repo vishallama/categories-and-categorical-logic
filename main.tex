@@ -2167,5 +2167,27 @@ isomorphism}}:
     Verify naturality of diagonal transformations, projections, and terminals,
     for a category $\mc{C}$ with finite products.
 \end{Exercise}
+\begin{solution}
+    Suppose $\mc{C}$ is a category with finite products.
+
+    (Naturality of diagonal transformation) We show that for all objects $A, B$
+    in $\mc{C}$ and all arrows $f: A \to B$, the following diagram commutes:
+    \[
+    \begin{tikzcd}
+        A \arrow[r, "f"]
+          \arrow[d, swap, "\Delta_A"]
+        & B \arrow[d, "\Delta_B"]\\
+        A \times A \arrow[r, swap, "f \times f"]
+                   & B \times B
+    \end{tikzcd}
+    \]
+    Note that $\Delta_A : A \to A \times A := \langle 1_A, 1_A \rangle$. Now,
+    $\Delta_B \circ f = \langle 1_B, 1_B \rangle \circ f = \langle 1_B \circ f,
+    1_B \circ f \rangle = \langle f, f \rangle$. And, $(f \times f) \circ
+    \Delta_A = (f \times f) \circ \langle 1_A, 1_A \rangle = \langle f \circ
+    1_A, f \circ 1_A \rangle = \langle f, f \rangle$, which shows $\Delta_B
+    \circ f = (f \times f) \circ \Delta_A$, thus proving the above diagram
+    commutes.
+\end{solution}
 
 \end{document}
