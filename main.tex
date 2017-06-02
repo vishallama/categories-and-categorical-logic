@@ -2110,6 +2110,24 @@ isomorphism}}:
     \end{center}
     specify a natural transformation $\tau: \opn{Id} \to K_T$ (where $\opn{Id}$)
     is the identity functor on $\mc{C}$.
+
+    \item Recall the functor $\List: \catname{Set} \to \catname{Set}$ that
+    takes a set $X$ to the set of finite lists with elements in $X$. We can
+    define the following natural transformations,
+    \begin{center}
+        $\texttt{reverse}: \List \to \List$,\\
+        $\texttt{unit}: \opn{Id} \to \List$,\\
+        $\texttt{flatten}: \List \circ \List \to \List$,
+    \end{center}
+    by setting, for each set $X$,
+    \begin{align*}
+        \texttt{reverse}_X &: \List(X) \to \List(X) :=
+        [x_1, \ldots, x_n] \mapsto [x_n, \ldots, x_1]\\
+        \texttt{unit}_X &: X \to \List(X) := x \mapsto [x]\\
+        \texttt{flatten}_X &: \List(\List(X)) \to \List(X)\\
+        &:= [[x_1^1, \ldots, x_{n_1}^1], \ldots, [x_1^k, \ldots, x_{n_k}^k]
+        \mapsto [x_1^1, \ldots \ldots, x_{n_k}^k].
+    \end{align*}
 \end{itemize}
 
 \end{document}
