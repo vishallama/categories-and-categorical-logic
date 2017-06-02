@@ -2188,6 +2188,20 @@ isomorphism}}:
     1_A, f \circ 1_A \rangle = \langle f, f \rangle$, which shows $\Delta_B
     \circ f = (f \times f) \circ \Delta_A$, thus proving the above diagram
     commutes.
+
+    (Naturality of projections) We claim that for all $f: A \to B$ and $g: C
+    \to D$ in $\mc{C}$, the following diagram commutes.
+    \[
+    \begin{tikzcd}
+        A \times C \arrow[r, "f \times g"]
+                   \arrow[d, swap, "\pi_1"]
+                   & B \times D \arrow[d, "\pi_1"]\\
+        A \arrow[r, swap, "f"]
+          & B
+    \end{tikzcd}
+    \]
+    Indeed, $\pi_1 \circ (f \times g) = \pi_1 \circ \langle f \circ \pi_1,
+    g \circ \pi_2 \rangle = f \circ \pi_1$, thus establishing our claim.
 \end{solution}
 
 \end{document}
