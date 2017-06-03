@@ -2189,7 +2189,7 @@ isomorphism}}:
     \circ f = (f \times f) \circ \Delta_A$, thus proving the above diagram
     commutes.
 
-    (Naturality of projections) We claim that for all $f: A \to B$ and $g: C
+    (Naturality of projection) We claim that for all $f: A \to B$ and $g: C
     \to D$ in $\mc{C}$, the following diagram commutes.
     \[
     \begin{tikzcd}
@@ -2202,6 +2202,23 @@ isomorphism}}:
     \]
     Indeed, $\pi_1 \circ (f \times g) = \pi_1 \circ \langle f \circ \pi_1,
     g \circ \pi_2 \rangle = f \circ \pi_1$, thus establishing our claim.
+
+    (Naturality of terminal projection) Let $T$ be a terminal object in
+    $\mc{C}$. The fact that the canonical arrows $\tau_A: A \to T$ specify a
+    natural transformation is demonstrated by showing the following diagram
+    commutes:
+    \[
+    \begin{tikzcd}
+        A \arrow[r, "f"]
+          \arrow[d, swap, "\tau_A"]
+          & B \arrow[d, "\tau_B"]\\
+        T \arrow[r, swap, "1_T"]
+          & T
+    \end{tikzcd}
+    \]
+    Indeed, note $\tau_B \circ f: A \to T$ and $1_T \circ \tau_A: A \to T$, and
+    since $T$ is a terminal object, we must have $\tau_B \circ f = 1_T \circ
+    \tau_A$, thereby proving the above diagram commutes.
 \end{solution}
 
 \end{document}
